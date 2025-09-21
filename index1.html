@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨CC技术文章站点 - 即将开放</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 引入粒子背景库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script async src="https://0198bc58-ac63-71ed-a536-46941550f9e1.ustat1.com/ustat.js"></script>
+    
+    <!-- 配置Tailwind自定义颜色和字体 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5', // 深紫蓝色，更现代感
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        dark: '#111827',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
+            }
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            .bg-grid {
+                background-size: 40px 40px;
+                background-image: 
+                    linear-gradient(to right, rgba(79, 70, 229, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(79, 70, 229, 0.05) 1px, transparent 1px);
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            .animate-pulse-slow {
+                animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+            .animate-fade-in-up {
+                animation: fadeInUp 1s ease forwards;
+            }
+            .animate-typewriter {
+                overflow: hidden;
+                border-right: 0.15em solid #4F46E5;
+                white-space: nowrap;
+                margin: 0 auto;
+                animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #4F46E5 }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-dark text-light overflow-x-hidden">
+    <!-- 粒子背景容器 -->
+    <div id="particles-js" class="fixed inset-0 z-0 opacity-70"></div>
+    
+    <!-- 网格背景 -->
+    <div class="fixed inset-0 z-10 bg-grid opacity-30"></div>
+    
+    <!-- 主容器 -->
+    <div class="relative z-20 max-w-5xl w-full mx-auto px-4 py-16 md:py-24 flex flex-col items-center justify-center min-h-screen">
+        <!-- 装饰元素 -->
+        <div class="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/20 animate-float hidden lg:block"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-accent/20 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-16 h-16 rounded-full bg-secondary/20 animate-float" style="animation-delay: 4s;"></div>
+        
+        <!-- 站点Logo/图标 -->
+        <div class="mb-12 opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
+            <div class="w-24 h-24 md:w-32 md:h-32 mx-auto bg-primary/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-primary/20 shadow-lg shadow-primary/10 transform transition-all duration-500 hover:scale-110 hover:shadow-primary/20">
+                <i class="fa fa-code text-4xl md:text-5xl text-primary animate-pulse-slow"></i>
+            </div>
+        </div>
+        
+        <!-- 主标题 -->
+        <h1 class="text-[clamp(2.5rem,8vw,4.5rem)] font-bold mb-6 leading-tight text-shadow opacity-0 animate-fade-in-up" style="animation-delay: 0.6s;">
+            <span class="bg-gradient-to-r from-primary to-blue-400 text-gradient">杨CC技术文章站点</span>
+        </h1>
+        
+        <!-- 副标题 - 打字效果 -->
+        <p class="text-[clamp(1.2rem,4vw,2.2rem)] text-gray-300 mb-12 font-mono max-w-xl mx-auto opacity-0 animate-fade-in-up" style="animation-delay: 0.9s;">
+            <span class="animate-typewriter">...即将开放</span>
+        </p>
+        
+        <!-- 简短说明 -->
+        <p class="text-gray-400 max-w-lg mx-auto mb-12 text-lg leading-relaxed opacity-0 animate-fade-in-up" style="animation-delay: 1.2s;">
+            专注于分享前沿技术见解、实用编程技巧与深度行业动态，打造高质量技术内容平台。
+        </p>
+        
+        <!-- 通知订阅区 -->
+        <div class="max-w-md w-full mx-auto mb-16 opacity-0 animate-fade-in-up" style="animation-delay: 1.5s;">
+            <form class="flex flex-col sm:flex-row gap-4">
+                <input 
+                    type="email" 
+                    placeholder="输入您的邮箱以获取上线通知" 
+                    class="flex-1 px-6 py-4 rounded-xl border border-gray-700 bg-dark/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300 placeholder-gray-500"
+                    required
+                >
+                <button 
+                    type="submit" 
+                    class="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2"
+                >
+                    <span>订阅通知</span>
+                    <i class="fa fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+        
+        <!-- 社交媒体链接 -->
+        <div class="flex justify-center gap-6 md:gap-8 mb-12 opacity-0 animate-fade-in-up" style="animation-delay: 1.8s;">
+            <a href="https://github.com/Sgyling/ycc77" class="w-12 h-12 rounded-full bg-dark/30 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-primary hover:bg-dark/50 border border-transparent hover:border-primary/30 transition-all duration-300 transform hover:scale-110">
+                <i class="fa fa-github text-xl"></i>
+            </a>
+            <a href="#" class="w-12 h-12 rounded-full bg-dark/30 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-primary hover:bg-dark/50 border border-transparent hover:border-primary/30 transition-all duration-300 transform hover:scale-110">
+                <i class="fa fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="w-12 h-12 rounded-full bg-dark/30 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-primary hover:bg-dark/50 border border-transparent hover:border-primary/30 transition-all duration-300 transform hover:scale-110">
+                <i class="fa fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="w-12 h-12 rounded-full bg-dark/30 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-primary hover:bg-dark/50 border border-transparent hover:border-primary/30 transition-all duration-300 transform hover:scale-110">
+                <i class="fa fa-weixin text-xl"></i>
+            </a>
+        </div>
+        
+        <!-- 页脚 -->
+        <footer class="text-gray-500 text-sm opacity-0 animate-fade-in-up" style="animation-delay: 2.1s;">
+            <p>&copy; <span id="current-year"></span> 杨CC技术文章站点. 保留所有权利.</p>
+        </footer>
+    </div>
+    
+    <!-- 交互脚本 -->
+    <script>
+        // 初始化粒子背景
+        document.addEventListener('DOMContentLoaded', () => {
+            // 设置当前年份
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // 粒子配置
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#4F46E5"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.2,
+                        "random": true,
+                        "anim": {
+                            "enable": true
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": true
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#4F46E5",
+                        "opacity": 0.1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1,
+                        "direction": "none",
+                        "random": true
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        }
+                    }
+                }
+            });
+            
+            // 表单提交处理
+            document.querySelector('form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const emailInput = e.target.querySelector('input[type="email"]');
+                const submitButton = e.target.querySelector('button');
+                
+                const originalText = submitButton.innerHTML;
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i> 提交中...';
+                
+                setTimeout(() => {
+                    submitButton.innerHTML = '<i class="fa fa-check mr-2"></i> 订阅成功!';
+                    submitButton.classList.remove('bg-primary');
+                    submitButton.classList.add('bg-secondary');
+                    emailInput.value = '';
+                    
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalText;
+                        submitButton.classList.remove('bg-secondary');
+                        submitButton.classList.add('bg-primary');
+                    }, 3000);
+                }, 1500);
+            });
+            
+            // 滚动动画
+            const animateOnScroll = () => {
+                document.querySelectorAll('.animate-fade-in-up').forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    if (elementTop < window.innerHeight - 150) {
+                        element.style.opacity = 1;
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>
+    

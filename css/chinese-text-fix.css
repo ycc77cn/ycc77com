@@ -1,0 +1,103 @@
+/* 中文字符显示优化 */
+
+/* 全局中文字符优化 */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 标题行高修复 - 确保中文字符完整显示 */
+h1, h2, h3, h4, h5, h6,
+.text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+  line-height: 1.4 !important;
+  padding-top: 0.1em !important;
+  padding-bottom: 0.1em !important;
+  min-height: 1.4em !important;
+}
+
+/* 文章页面标题特殊处理 */
+.post-title,
+article > header h1,
+main h1 {
+  line-height: 1.5 !important;
+  padding-top: 0.15em !important;
+  padding-bottom: 0.15em !important;
+  min-height: 1.5em !important;
+  display: block !important;
+  overflow: visible !important;
+}
+
+/* 首页文章卡片标题 */
+.post-card h2,
+article.group h2 {
+  line-height: 1.4 !important;
+  padding-top: 0.1em !important;
+  padding-bottom: 0.1em !important;
+  min-height: 1.4em !important;
+  display: block !important;
+  overflow: visible !important;
+}
+
+/* 修复Tailwind的leading类 */
+.leading-tight {
+  line-height: 1.3 !important;
+}
+
+.leading-snug {
+  line-height: 1.4 !important;
+}
+
+.leading-normal {
+  line-height: 1.5 !important;
+}
+
+/* 确保渐变文字也能正确显示 */
+.bg-clip-text {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  line-height: 1.5 !important;
+  padding-top: 0.1em !important;
+  padding-bottom: 0.1em !important;
+}
+
+/* 中文字符断行优化 */
+h1, h2, h3, h4, h5, h6 {
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+}
+
+/* 防止字符被裁剪 */
+* {
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* 特殊情况：超长标题的处理 */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    line-height: 1.3 !important;
+    word-break: break-all !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/* 确保容器有足够高度 */
+.prose h1,
+.prose-lg h1,
+.prose h2,
+.prose-lg h2,
+.prose h3,
+.prose-lg h3 {
+  min-height: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* 修复可能的容器高度限制 */
+header, .header, .post-header {
+  overflow: visible !important;
+  height: auto !important;
+  min-height: auto !important;
+}

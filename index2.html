@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO and Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title -->
+
+<title>Hexo</title>
+
+<!-- Description -->
+
+
+<meta name="description" content="杨CC的技术文章站点">
+
+
+<!-- Keywords -->
+
+
+<!-- Author -->
+
+<meta name="author" content="John Doe">
+
+
+<!-- Canonical URL -->
+<link rel="canonical" href="http://example.com/index.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+
+<meta property="og:description" content="杨CC的技术文章站点">
+
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hexo">
+
+<meta name="twitter:description" content="杨CC的技术文章站点">
+
+
+
+<!-- Article specific meta -->
+
+
+<!-- Favicon -->
+<link rel="icon" href="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon180.png">
+
+<!-- RSS Feed -->
+
+
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    // Suppress Tailwind CDN production warning in development
+    if (typeof tailwind !== 'undefined') {
+      tailwind.config = {
+        corePlugins: {
+          preflight: false,
+        }
+      }
+    }
+  </script>
+  
+  
+  <!-- Theme CSS -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/code-blocks.css">
+
+  
+<link rel="stylesheet" href="/css/cover-images.css">
+
+  
+<link rel="stylesheet" href="/css/chinese-text-fix.css">
+
+  
+  <!-- Theme Colors -->
+  <style type="text/tailwindcss">
+    :root {
+      
+      --primary-color: #0c7ff2;
+      
+      --secondary-color: #f3f4f6;
+      
+      --background-color: #ffffff;
+      
+      --text-primary-color: #111827;
+      
+      --text-secondary-color: #6b7280;
+      
+      --border-color: #e5e7eb;
+      
+    }
+    body {
+      font-family: 'Newsreader', serif;
+      background-color: var(--background-color);
+      color: var(--text-primary-color);
+    }
+  </style>
+  
+  <!-- Mobile Menu Script -->
+  <script src="/js/mobile-menu.js" defer></script>
+  
+  <!-- Code Copy Script -->
+  <script src="/js/code-copy.js" defer></script>
+  
+  <!-- Reading Progress Script -->
+  <script src="/js/reading-progress.js" defer></script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary-color)]">
+  <div class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-10 w-full bg-[var(--background-color)]/80 backdrop-blur-md">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24 ">
+      <!-- Logo and Title -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+        
+          
+            <!-- 自定义Logo -->
+            <img src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" 
+                 alt="杨CC技术录" 
+                 class="h-6 w-6 sm:h-8 sm:w-8 object-contain flex-shrink-0">
+          
+        
+        <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight truncate">杨CC技术录</h1>
+      </div>
+      
+      <!-- Navigation -->
+      <div class="flex items-center gap-2">
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-2">
+          
+            
+            <a class="px-4 py-2 text-base font-medium rounded-md bg-[var(--secondary-color)] text-[var(--text-primary-color)] transition-colors" 
+               href="/">首页</a>
+          
+            
+            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] transition-colors" 
+               href="/tags/">标签</a>
+          
+            
+            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] transition-colors" 
+               href="/categories/">分类</a>
+          
+            
+            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] transition-colors" 
+               href="/archives/">归档</a>
+          
+            
+            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] transition-colors" 
+               href="/about/">关于我</a>
+          
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex-shrink-0">
+          <button id="mobile-menu-button" class="p-3 rounded-md text-[var(--text-secondary-color)] hover:text-[var(--text-primary-color)] hover:bg-[var(--secondary-color)] transition-colors touch-manipulation">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[var(--background-color)] border-t border-[var(--border-color)] shadow-lg">
+        <div class="px-4 py-2 space-y-1">
+          
+            
+            <a class="block px-4 py-3 text-base font-medium rounded-md bg-[var(--secondary-color)] text-[var(--text-primary-color)] transition-colors" 
+               href="/">首页</a>
+          
+            
+            <a class="block px-4 py-3 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] transition-colors" 
+               href="/tags/">标签</a>
+          
+            
+            <a class="block px-4 py-3 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] transition-colors" 
+               href="/categories/">分类</a>
+          
+            
+            <a class="block px-4 py-3 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] transition-colors" 
+               href="/archives/">归档</a>
+          
+            
+            <a class="block px-4 py-3 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] transition-colors" 
+               href="/about/">关于我</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        
+          <!-- Reusable post card component -->
+<article class="group">
+  <div class="overflow-hidden rounded-lg mb-5">
+    
+      <div class="w-full aspect-[3/2] bg-[var(--secondary-color)] rounded-lg group-hover:scale-105 transition-transform duration-500 ease-in-out flex items-center justify-center overflow-hidden post-card-cover">
+        <img src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" 
+             alt="测试文章" 
+             class="max-w-full max-h-full w-auto h-auto object-contain rounded-lg post-card-cover-image"
+             loading="lazy"
+             onload="this.style.opacity='1'"
+             style="opacity: 0; transition: opacity 0.3s ease;">
+      </div>
+    
+  </div>
+  
+  <div class="mb-3">
+    
+      <div class="flex gap-2 mb-2">
+        
+          <a href="/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/" 
+             class="text-xs px-2 py-1 bg-[var(--primary-color)] text-white rounded-full hover:bg-opacity-80 transition-colors">
+            电子取证
+          </a>
+        
+      </div>
+    
+    
+    <h2 class="text-xl sm:text-2xl font-bold leading-normal tracking-tight mb-2">
+      <a class="hover:text-[var(--primary-color)] transition-colors" href="/2025/08/20/google-chrome-%E5%8F%96%E8%AF%81/">
+        测试文章
+      </a>
+    </h2>
+    
+    <div class="flex items-center gap-4 text-sm text-[var(--text-secondary-color)] mb-3">
+      <time datetime="2025-08-20T09:26:30.000Z">
+        Aug 20, 2025
+      </time>
+      <span>•</span>
+      <span>1 min read</span>
+    </div>
+  </div>
+  
+  <p class="text-[var(--text-secondary-color)] text-base sm:text-lg leading-relaxed">
+    
+
+  </p>
+  
+  
+    <div class="flex flex-wrap gap-2 mt-4">
+      
+        <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" 
+           class="text-xs text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors whitespace-nowrap">
+          #浏览器
+        </a>
+      
+        <a href="/tags/%E5%8F%96%E8%AF%81%E6%8A%80%E6%9C%AF/" 
+           class="text-xs text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors whitespace-nowrap">
+          #取证技术
+        </a>
+      
+    </div>
+  
+</article>
+        
+      </div>
+      
+      <!-- Pagination component -->
+
+    </main>
+    
+    <footer class="bg-[var(--background-color)] border-t border-[var(--border-color)]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="text-[var(--text-secondary-color)] text-sm">
+        © 2025 Hexo. All rights reserved.
+      </p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors text-sm" href="#">Privacy Policy</a>
+        <a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors text-sm" href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+   <script async src="https://0198bc58-ac63-71ed-a536-46941550f9e1.ustat1.com/ustat.js"></script>
+</footer>
+  </div>
+</body>
+</html>

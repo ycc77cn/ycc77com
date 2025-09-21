@@ -1,0 +1,644 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程 | 杨CC 技术录</title><meta name="author" content="杨CC"><meta name="copyright" content="杨CC"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="闲鱼自动发货,自动回复,支持发虚拟货">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程">
+<meta property="og:url" content="https://ycc77.com/2025/08/21/1-%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B71_%E5%92%B8%E9%B1%BC%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D/index.html">
+<meta property="og:site_name" content="杨CC 技术录">
+<meta property="og:description" content="闲鱼自动发货,自动回复,支持发虚拟货">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/68a725f358cb8da5c84137f9.png">
+<meta property="article:published_time" content="2025-08-21T09:26:30.000Z">
+<meta property="article:modified_time" content="2025-08-23T09:19:18.980Z">
+<meta property="article:author" content="杨CC">
+<meta property="article:tag" content="工具教程">
+<meta property="article:tag" content="闲鱼">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/item/68a725f358cb8da5c84137f9.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "一款支持闲鱼自动回复\\自动发货的神奇工具-带安装教程",
+  "url": "https://ycc77.com/2025/08/21/1-%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B71_%E5%92%B8%E9%B1%BC%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D/",
+  "image": "https://pic1.imgdb.cn/item/68a725f358cb8da5c84137f9.png",
+  "datePublished": "2025-08-21T09:26:30.000Z",
+  "dateModified": "2025-08-23T09:19:18.980Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "杨CC",
+      "url": "https://Ycc77.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png"><link rel="canonical" href="https://ycc77.com/2025/08/21/1-%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B71_%E5%92%B8%E9%B1%BC%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><!-- 异步加载统计脚本--><script async src="https://0198bc58-ac63-71ed-a536-46941550f9e1.ustat1.com/ustat.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">36</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">12</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ycc77.cn"><span> 杨CC资源站</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(https://pic1.imgdb.cn/item/68a725f358cb8da5c84137f9.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" alt="Logo"><span class="site-name">杨CC 技术录</span></a><a class="nav-page-title" href="/"><span class="site-name">一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ycc77.cn"><span> 杨CC资源站</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-08-21T09:26:30.000Z" title="Created 2025-08-21 17:26:30">2025-08-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-23T09:19:18.980Z" title="Updated 2025-08-23 17:19:18">2025-08-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B7/">电商工具</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2025-08-23 17:19:18&quot;}" hidden></div><h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1-简介"></a>1-简介</h1><p>​	<strong>一个功能完整的闲鱼自动回复和管理系统，支持多用户、多账号管理，具备智能回复、自动发货、自动确认发货、商品管理等企业级功能。</strong></p>
+<p>​	**注意:**工具演示在5.2</p>
+<p>​	首先,该工具是免费的,无需收费的.</p>
+<p>​	任何花钱购买的工具,请全部申请退款!</p>
+<hr>
+<h1 id="2-核心特性"><a href="#2-核心特性" class="headerlink" title="2-核心特性"></a>2-核心特性</h1><h3 id="🔐-多用户系统"><a href="#🔐-多用户系统" class="headerlink" title="🔐 多用户系统"></a>🔐 多用户系统</h3><ul>
+<li><strong>用户注册登录</strong> - 支持邮箱验证码注册，图形验证码保护</li>
+<li><strong>数据完全隔离</strong> - 每个用户的数据独立存储，互不干扰</li>
+<li><strong>权限管理</strong> - 严格的用户权限控制和JWT认证</li>
+<li><strong>安全保护</strong> - 防暴力破解、会话管理、安全日志</li>
+</ul>
+<h3 id="📱-多账号管理"><a href="#📱-多账号管理" class="headerlink" title="📱 多账号管理"></a>📱 多账号管理</h3><ul>
+<li><strong>无限账号支持</strong> - 每个用户可管理多个闲鱼账号</li>
+<li><strong>独立运行</strong> - 每个账号独立监控，互不影响</li>
+<li><strong>实时状态</strong> - 账号连接状态实时监控</li>
+<li><strong>批量操作</strong> - 支持批量启动、停止账号任务</li>
+</ul>
+<h3 id="🤖-智能回复系统"><a href="#🤖-智能回复系统" class="headerlink" title="🤖 智能回复系统"></a>🤖 智能回复系统</h3><ul>
+<li><strong>关键词匹配</strong> - 支持精确关键词匹配回复</li>
+<li><strong>指定商品回复</strong> - 支持为特定商品设置专门的回复内容，优先级最高</li>
+<li><strong>商品专用关键词</strong> - 支持为特定商品设置专用关键词回复</li>
+<li><strong>通用关键词</strong> - 支持全局通用关键词，适用于所有商品</li>
+<li><strong>批量导入导出</strong> - 支持Excel格式的关键词批量导入导出</li>
+<li><strong>AI智能回复</strong> - 集成OpenAI API，支持上下文理解</li>
+<li><strong>变量替换</strong> - 回复内容支持动态变量（用户名、商品信息、商品ID等）</li>
+<li><strong>优先级策略</strong> - 指定商品回复 &gt; 商品专用关键词 &gt; 通用关键词 &gt; 默认回复 &gt; AI回复</li>
+</ul>
+<h3 id="🚚-自动发货功能"><a href="#🚚-自动发货功能" class="headerlink" title="🚚 自动发货功能"></a>🚚 自动发货功能</h3><ul>
+<li><strong>智能匹配</strong> - 基于商品信息自动匹配发货规则</li>
+<li><strong>多规格支持</strong> - 支持同一商品的不同规格自动匹配对应卡券</li>
+<li><strong>精确匹配+兜底机制</strong> - 优先精确匹配规格，失败时自动降级到普通卡券</li>
+<li><strong>延时发货</strong> - 支持设置发货延时时间（0-3600秒）</li>
+<li><strong>多种触发</strong> - 支持付款消息、小刀消息等多种触发条件</li>
+<li><strong>防重复发货</strong> - 智能防重复机制，避免重复发货</li>
+<li><strong>多种发货方式</strong> - 支持固定文字、批量数据、API调用、图片发货等方式</li>
+<li><strong>图片发货</strong> - 支持上传图片并自动发送给买家，图片自动上传到CDN</li>
+<li><strong>自动确认发货</strong> - 检测到付款后自动调用闲鱼API确认发货，支持锁机制防并发</li>
+<li><strong>防重复确认</strong> - 智能防重复确认机制，避免重复API调用</li>
+<li><strong>订单详情缓存</strong> - 订单详情获取支持数据库缓存，大幅提升性能</li>
+<li><strong>发货统计</strong> - 完整的发货记录和统计功能</li>
+</ul>
+<h3 id="🛍️-商品管理"><a href="#🛍️-商品管理" class="headerlink" title="🛍️ 商品管理"></a>🛍️ 商品管理</h3><ul>
+<li><strong>自动收集</strong> - 消息触发时自动收集商品信息</li>
+<li><strong>API获取</strong> - 通过闲鱼API获取完整商品详情</li>
+<li><strong>多规格支持</strong> - 支持多规格商品的规格信息管理</li>
+<li><strong>批量管理</strong> - 支持批量查看、编辑、切换多规格状态</li>
+<li><strong>智能去重</strong> - 自动去重，避免重复存储</li>
+</ul>
+<h3 id="🔍-商品搜索功能"><a href="#🔍-商品搜索功能" class="headerlink" title="🔍 商品搜索功能"></a>🔍 商品搜索功能</h3><ul>
+<li><strong>真实数据获取</strong> - 基于Playwright技术获取真实闲鱼商品数据</li>
+<li><strong>智能排序</strong> - 按”人想要”数量自动倒序排列</li>
+<li><strong>多页搜索</strong> - 支持一次性获取多页商品数据</li>
+<li><strong>前端分页</strong> - 灵活的前端分页显示</li>
+<li><strong>商品详情</strong> - 支持查看完整商品详情信息</li>
+</ul>
+<h3 id="📊-系统监控"><a href="#📊-系统监控" class="headerlink" title="📊 系统监控"></a>📊 系统监控</h3><ul>
+<li><strong>实时日志</strong> - 完整的操作日志记录和查看</li>
+<li><strong>性能监控</strong> - 系统资源使用情况监控</li>
+<li><strong>健康检查</strong> - 服务状态健康检查</li>
+</ul>
+<h3 id="📁-数据管理"><a href="#📁-数据管理" class="headerlink" title="📁 数据管理"></a>📁 数据管理</h3><ul>
+<li><strong>Excel导入导出</strong> - 支持关键词数据的Excel格式导入导出</li>
+<li><strong>模板生成</strong> - 自动生成包含示例数据的导入模板</li>
+<li><strong>批量操作</strong> - 支持批量添加、更新关键词数据</li>
+<li><strong>数据验证</strong> - 导入时自动验证数据格式和重复性</li>
+<li><strong>多规格卡券管理</strong> - 支持创建和管理多规格卡券</li>
+<li><strong>发货规则管理</strong> - 支持多规格发货规则的创建和管理</li>
+<li><strong>数据备份</strong> - 自动数据备份和恢复</li>
+<li><strong>一键部署</strong> - 提供预构建Docker镜像，无需编译即可快速部署</li>
+</ul>
+<h1 id="3-项目结构"><a href="#3-项目结构" class="headerlink" title="3-项目结构"></a>3-项目结构</h1><details open="" style="box-sizing: border-box; display: block; margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><summary style="box-sizing: border-box; display: list-item; cursor: pointer;">点击展开查看详细项目结构</summary><div class="snippet-clipboard-content notranslate position-relative overflow-auto" style="box-sizing: border-box; position: relative !important; overflow: auto !important; display: flex; justify-content: space-between; margin-bottom: 16px; background-color: rgb(246, 248, 250);"><pre class="notranslate" style="box-sizing: border-box; font-family: &quot;Monaspace Neon&quot;, ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; font-size: 13.6px; margin-top: 0px; margin-bottom: 0px; tab-size: 4; overflow-wrap: normal; padding: 16px; overflow: auto; line-height: 1.45; color: rgb(31, 35, 40); background-color: rgb(246, 248, 250); border-radius: 6px;"><code style="box-sizing: border-box; font-family: &quot;Monaspace Neon&quot;, ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; font-size: 13.6px; tab-size: 4; padding: 0px; margin: 0px; white-space: pre; background: rgba(0, 0, 0, 0); border-radius: 6px; word-break: normal; border: 0px; display: inline; overflow: visible; line-height: inherit; overflow-wrap: normal;">xianyu-auto-reply/
+├── 📄 核心文件
+│   ├── Start.py                    # 项目启动入口，初始化所有服务
+│   ├── XianyuAutoAsync.py         # 闲鱼WebSocket连接和消息处理核心
+│   ├── reply_server.py            # FastAPI Web服务器和完整API接口
+│   ├── db_manager.py              # SQLite数据库管理，支持多用户数据隔离
+│   ├── cookie_manager.py          # 多账号Cookie管理和任务调度
+│   ├── ai_reply_engine.py         # AI智能回复引擎，支持多种AI模型
+│   ├── file_log_collector.py      # 实时日志收集和管理系统
+│   ├── config.py                  # 全局配置文件管理器
+│   ├── secure_confirm_ultra.py    # 自动确认发货模块（多层加密保护）
+│   └── secure_freeshipping_ultra.py # 自动免拼发货模块（多层加密保护）
+├── 🛠️ 工具模块
+│   └── utils/
+│       ├── xianyu_utils.py        # 闲鱼API工具函数（加密、签名、解析）
+│       ├── message_utils.py       # 消息格式化和处理工具
+│       ├── ws_utils.py            # WebSocket客户端封装
+│       ├── qr_login.py            # 二维码登录功能
+│       ├── item_search.py         # 商品搜索功能（基于Playwright，无头模式）
+│       ├── order_detail_fetcher.py # 订单详情获取工具
+│       ├── image_utils.py         # 图片处理工具（压缩、格式转换）
+│       └── image_uploader.py      # 图片上传到CDN工具
+├── 🌐 前端界面
+│   └── static/
+│       ├── index.html             # 主管理界面（集成所有功能模块）
+│       ├── login.html             # 用户登录页面
+│       ├── register.html          # 用户注册页面（邮箱验证）
+│       ├── user_management.html   # 用户管理页面（管理员功能）
+│       ├── data_management.html   # 数据管理页面（导入导出）
+│       ├── log_management.html    # 日志管理页面（实时日志查看）
+│       ├── item_search.html       # 商品搜索页面（独立版本）
+│       ├── js/
+│       │   ├── app.js             # 主要JavaScript逻辑
+│       │   └── modules/           # 模块化JavaScript文件
+│       ├── css/
+│       │   ├── variables.css      # CSS变量定义
+│       │   ├── layout.css         # 布局样式
+│       │   ├── components.css     # 组件样式
+│       │   ├── accounts.css       # 账号管理样式
+│       │   ├── keywords.css       # 关键词管理样式
+│       │   ├── items.css          # 商品管理样式
+│       │   ├── logs.css           # 日志管理样式
+│       │   ├── notifications.css  # 通知样式
+│       │   ├── dashboard.css      # 仪表板样式
+│       │   ├── admin.css          # 管理员样式
+│       │   └── app.css            # 主应用样式
+│       ├── lib/
+│       │   ├── bootstrap/         # Bootstrap框架
+│       │   └── bootstrap-icons/   # Bootstrap图标
+│       ├── uploads/
+│       │   └── images/            # 上传的图片文件
+│       ├── xianyu_js_version_2.js # 闲鱼JavaScript工具库
+│       ├── wechat-group.png       # 微信群二维码
+│       └── qq-group.png           # QQ群二维码
+├── 🐳 Docker部署
+│   ├── Dockerfile                 # Docker镜像构建文件
+│   ├── docker-compose.yml        # Docker Compose一键部署配置
+│   ├── docker-deploy.sh          # Docker部署管理脚本（Linux/macOS）
+│   ├── docker-deploy.bat         # Docker部署管理脚本（Windows）
+│   └── entrypoint.sh              # Docker容器启动脚本
+├── 📋 配置文件
+│   ├── global_config.yml         # 全局配置文件（WebSocket、API等）
+│   ├── requirements.txt          # Python依赖包列表（精简版）
+│   ├── .gitignore                # Git忽略文件配置
+│   └── README.md                 # 项目说明文档
+└── 📊 数据目录（运行时创建）
+    ├── data/                     # 数据目录（Docker挂载）
+    │   └── xianyu_data.db        # SQLite数据库文件
+    ├── logs/                     # 按日期分割的日志文件
+    └── backups/                  # 数据备份文件
+</code></pre><div class="zeroclipboard-container" style="box-sizing: border-box; display: block; animation: auto ease 0s 1 normal none running none;"><clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="xianyu-auto-reply/
+├── 📄 核心文件
+│   ├── Start.py                    # 项目启动入口，初始化所有服务
+│   ├── XianyuAutoAsync.py         # 闲鱼WebSocket连接和消息处理核心
+│   ├── reply_server.py            # FastAPI Web服务器和完整API接口
+│   ├── db_manager.py              # SQLite数据库管理，支持多用户数据隔离
+│   ├── cookie_manager.py          # 多账号Cookie管理和任务调度
+│   ├── ai_reply_engine.py         # AI智能回复引擎，支持多种AI模型
+│   ├── file_log_collector.py      # 实时日志收集和管理系统
+│   ├── config.py                  # 全局配置文件管理器
+│   ├── secure_confirm_ultra.py    # 自动确认发货模块（多层加密保护）
+│   └── secure_freeshipping_ultra.py # 自动免拼发货模块（多层加密保护）
+├── 🛠️ 工具模块
+│   └── utils/
+│       ├── xianyu_utils.py        # 闲鱼API工具函数（加密、签名、解析）
+│       ├── message_utils.py       # 消息格式化和处理工具
+│       ├── ws_utils.py            # WebSocket客户端封装
+│       ├── qr_login.py            # 二维码登录功能
+│       ├── item_search.py         # 商品搜索功能（基于Playwright，无头模式）
+│       ├── order_detail_fetcher.py # 订单详情获取工具
+│       ├── image_utils.py         # 图片处理工具（压缩、格式转换）
+│       └── image_uploader.py      # 图片上传到CDN工具
+├── 🌐 前端界面
+│   └── static/
+│       ├── index.html             # 主管理界面（集成所有功能模块）
+│       ├── login.html             # 用户登录页面
+│       ├── register.html          # 用户注册页面（邮箱验证）
+│       ├── user_management.html   # 用户管理页面（管理员功能）
+│       ├── data_management.html   # 数据管理页面（导入导出）
+│       ├── log_management.html    # 日志管理页面（实时日志查看）
+│       ├── item_search.html       # 商品搜索页面（独立版本）
+│       ├── js/
+│       │   ├── app.js             # 主要JavaScript逻辑
+│       │   └── modules/           # 模块化JavaScript文件
+│       ├── css/
+│       │   ├── variables.css      # CSS变量定义
+│       │   ├── layout.css         # 布局样式
+│       │   ├── components.css     # 组件样式
+│       │   ├── accounts.css       # 账号管理样式
+│       │   ├── keywords.css       # 关键词管理样式
+│       │   ├── items.css          # 商品管理样式
+│       │   ├── logs.css           # 日志管理样式
+│       │   ├── notifications.css  # 通知样式
+│       │   ├── dashboard.css      # 仪表板样式
+│       │   ├── admin.css          # 管理员样式
+│       │   └── app.css            # 主应用样式
+│       ├── lib/
+│       │   ├── bootstrap/         # Bootstrap框架
+│       │   └── bootstrap-icons/   # Bootstrap图标
+│       ├── uploads/
+│       │   └── images/            # 上传的图片文件
+│       ├── xianyu_js_version_2.js # 闲鱼JavaScript工具库
+│       ├── wechat-group.png       # 微信群二维码
+│       └── qq-group.png           # QQ群二维码
+├── 🐳 Docker部署
+│   ├── Dockerfile                 # Docker镜像构建文件
+│   ├── docker-compose.yml        # Docker Compose一键部署配置
+│   ├── docker-deploy.sh          # Docker部署管理脚本（Linux/macOS）
+│   ├── docker-deploy.bat         # Docker部署管理脚本（Windows）
+│   └── entrypoint.sh              # Docker容器启动脚本
+├── 📋 配置文件
+│   ├── global_config.yml         # 全局配置文件（WebSocket、API等）
+│   ├── requirements.txt          # Python依赖包列表（精简版）
+│   ├── .gitignore                # Git忽略文件配置
+│   └── README.md                 # 项目说明文档
+└── 📊 数据目录（运行时创建）
+    ├── data/                     # 数据目录（Docker挂载）
+    │   └── xianyu_data.db        # SQLite数据库文件
+    ├── logs/                     # 按日期分割的日志文件
+    └── backups/                  # 数据备份文件" tabindex="0" role="button" style="box-sizing: border-box; position: relative; display: flex !important; padding: 0px !important; font-size: 14px; font-weight: 500; line-height: 20px; white-space: nowrap; vertical-align: middle; cursor: pointer; user-select: none; border: 0px; border-radius: 6px; appearance: none; color: rgb(9, 105, 218); background-color: rgba(0, 0, 0, 0); box-shadow: none; transition: color 80ms cubic-bezier(0.33, 1, 0.68, 1), background-color, box-shadow, border-color; justify-content: center !important; align-items: center !important; margin: 8px !important; width: 28px; height: 28px;"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg></clipboard-copy></div></div></details>
+
+
+
+<h1 id="4-安装以及使用"><a href="#4-安装以及使用" class="headerlink" title="4-安装以及使用"></a>4-安装以及使用</h1><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><ul>
+<li><strong>Python</strong>: 3.11+</li>
+<li><strong>Node.js</strong>: 16+ (用于JavaScript执行)</li>
+<li><strong>系统</strong>: Windows&#x2F;Linux&#x2F;macOS</li>
+<li><strong>内存</strong>: 建议2GB+</li>
+<li><strong>存储</strong>: 建议10GB+</li>
+<li><strong>Docker</strong>: 20.10+ (Docker部署)</li>
+<li><strong>Docker Compose</strong>: 2.0+ (Docker部署)</li>
+</ul>
+<h2 id="4-1-小白安装-安装即用"><a href="#4-1-小白安装-安装即用" class="headerlink" title="4.1 小白安装(安装即用)"></a>4.1 小白安装(安装即用)</h2><h3 id="4-1-1-安装Docker"><a href="#4-1-1-安装Docker" class="headerlink" title="4.1.1 安装Docker"></a>4.1.1 安装Docker</h3><p>首先,你需要安装docker</p>
+<ul>
+<li>Windows 请自行搜索下载Docker</li>
+</ul>
+<hr>
+<hr>
+<ul>
+<li>Linux 下,请自行搜索下载Docker</li>
+</ul>
+<h3 id="4-1-2-Linux-Mac-OS-本地安装"><a href="#4-1-2-Linux-Mac-OS-本地安装" class="headerlink" title="4.1.2 Linux\Mac OS 本地安装"></a>4.1.2 Linux\Mac OS 本地安装</h3><ul>
+<li><p>创建目录</p>
+</li>
+<li><p>mkdir -p xianyu-auto-reply</p>
+</li>
+<li><p>启动容器</p>
+</li>
+<li><p>docker run -d <br>  -p 8080:8080 <br>  -v $PWD&#x2F;xianyu-auto-reply&#x2F;:&#x2F;app&#x2F;data&#x2F; <br>  –name xianyu-auto-reply <br>  registry.cn-shanghai.aliyuncs.com&#x2F;zhinian-software&#x2F;xianyu-auto-reply:1.0</p>
+</li>
+<li><p>启动系统</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a></p>
+</li>
+<li><p>上方两个链接均可访问.</p>
+</li>
+</ul>
+<h3 id="4-1-3-Windows-本地安装"><a href="#4-1-3-Windows-本地安装" class="headerlink" title="4.1.3 Windows 本地安装"></a>4.1.3 Windows 本地安装</h3><ul>
+<li><p>创建数据目录</p>
+</li>
+<li><p>mkdir xianyu-auto-reply</p>
+</li>
+<li><p>启动容器</p>
+</li>
+<li><p>docker run -d -p 8080:8080 -v %cd%&#x2F;xianyu-auto-reply&#x2F;:&#x2F;app&#x2F;data&#x2F; –name xianyu-auto-reply registry.cn-shanghai.aliyuncs.com&#x2F;zhinian-software&#x2F;xianyu-auto-reply:1.0</p>
+</li>
+<li><p>访问系统</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://127.0.0.1:8080/">http://127.0.0.1:8080</a></p>
+</li>
+<li><p>上方两个链接均可访问.</p>
+</li>
+</ul>
+<h3 id="4-1-4-云端安装"><a href="#4-1-4-云端安装" class="headerlink" title="4.1.4 云端安装"></a>4.1.4 云端安装</h3><ul>
+<li>与上方本地安装方式一致,但需要注意查看云端的ip</li>
+<li>1.Linux安装net-tools工具套</li>
+<li>sudo apt install net-tools # debian系列</li>
+<li>sudo yum install net-tools # redhat系列</li>
+<li>sudo pacman -Sy net-tools # arch系列</li>
+<li>2.Windows下无需下载net-tools</li>
+<li>3.开放防火墙8080端口(不会的看服务器文档)</li>
+<li>4.通过上方本地安装的教程,进行云端安装</li>
+<li>5.访问:http:&#x2F;&#x2F;你的ip:8080  进行访问即可</li>
+</ul>
+<h2 id="4-2-源码构建部署-推荐资深玩家部署"><a href="#4-2-源码构建部署-推荐资深玩家部署" class="headerlink" title="4.2 源码构建部署(推荐资深玩家部署)"></a>4.2 源码构建部署(推荐资深玩家部署)</h2><h3 id="4-2-1-Linux-MAC-OS-构建"><a href="#4-2-1-Linux-MAC-OS-构建" class="headerlink" title="4.2.1 Linux\MAC OS 构建"></a>4.2.1 Linux\MAC OS 构建</h3><p>需要安装python环境,最好在python3.11以上(自行百度)</p>
+<ol>
+<li>克隆项目</li>
+</ol>
+<ul>
+<li>git clone <a target="_blank" rel="noopener" href="https://github.com/zhinianboke/xianyu-auto-reply.git">https://github.com/zhinianboke/xianyu-auto-reply.git</a></li>
+<li>cd xianyu-auto-reply</li>
+</ul>
+<ol start="2">
+<li>设置脚本执行权限（Linux&#x2F;macOS）</li>
+</ol>
+<ul>
+<li>chmod +x docker-deploy.sh</li>
+</ul>
+<ol start="3">
+<li>一键部署（自动构建镜像）</li>
+</ol>
+<ul>
+<li>.&#x2F;docker-deploy.sh</li>
+</ul>
+<ol start="4">
+<li>访问系统</li>
+</ol>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a></li>
+</ul>
+<h3 id="4-2-2-Windows-构建"><a href="#4-2-2-Windows-构建" class="headerlink" title="4.2.2 Windows 构建"></a>4.2.2 Windows 构建</h3><p> 需要安装python环境,最好在python3.11以上(自行百度)</p>
+<ul>
+<li><p>克隆项目</p>
+</li>
+<li><p>git clone <a target="_blank" rel="noopener" href="https://github.com/zhinianboke/xianyu-auto-reply.git">https://github.com/zhinianboke/xianyu-auto-reply.git</a></p>
+</li>
+<li><p>cd xianyu-auto-reply</p>
+</li>
+<li><p>使用Windows批处理脚本（推荐）</p>
+</li>
+<li><p>docker-deploy.bat</p>
+</li>
+<li><p>或者使用Git Bash&#x2F;WSL</p>
+</li>
+<li><p>bash docker-deploy.sh</p>
+</li>
+<li><p>或者直接使用Docker Compose</p>
+</li>
+<li><p>docker-compose up -d –build</p>
+</li>
+</ul>
+<h1 id="5-核心功能以及演示"><a href="#5-核心功能以及演示" class="headerlink" title="5-核心功能以及演示"></a>5-核心功能以及演示</h1><h2 id="5-1-核心功能"><a href="#5-1-核心功能" class="headerlink" title="5.1 核心功能"></a>5.1 核心功能</h2><h3 id="🚀-自动回复系统"><a href="#🚀-自动回复系统" class="headerlink" title="🚀 自动回复系统"></a>🚀 自动回复系统</h3><ul>
+<li><strong>智能关键词匹配</strong> - 支持精确匹配和模糊匹配，灵活配置回复规则</li>
+<li><strong>AI智能回复</strong> - 集成多种AI模型（通义千问、GPT等），智能理解用户意图</li>
+<li><strong>多账号管理</strong> - 支持同时管理多个闲鱼账号，独立配置和运行</li>
+<li><strong>实时消息处理</strong> - WebSocket长连接，毫秒级响应用户消息</li>
+<li><strong>自定义回复模板</strong> - 支持占位符和动态内容，个性化回复体验</li>
+</ul>
+<h3 id="🛒-自动发货系统"><a href="#🛒-自动发货系统" class="headerlink" title="🛒 自动发货系统"></a>🛒 自动发货系统</h3><ul>
+<li><strong>智能订单识别</strong> - 自动识别虚拟商品订单，精准匹配发货规则</li>
+<li><strong>多重安全验证</strong> - 超级加密保护，防止误操作和数据泄露</li>
+<li><strong>批量处理能力</strong> - 支持批量确认发货，提高处理效率</li>
+<li><strong>异常处理机制</strong> - 完善的错误处理和重试机制，确保发货成功</li>
+<li><strong>多渠道通知</strong> - 支持QQ、钉钉、邮件等多种发货通知方式</li>
+</ul>
+<h3 id="👥-多用户系统"><a href="#👥-多用户系统" class="headerlink" title="👥 多用户系统"></a>👥 多用户系统</h3><ul>
+<li><strong>用户注册登录</strong> - 支持邮箱验证和图形验证码，安全可靠</li>
+<li><strong>权限管理</strong> - 管理员和普通用户权限分离，精细化权限控制</li>
+<li><strong>数据隔离</strong> - 每个用户的数据完全隔离，保护隐私安全</li>
+<li><strong>会话管理</strong> - JWT Token认证，支持自动续期和安全登出</li>
+</ul>
+<h3 id="📊-数据管理"><a href="#📊-数据管理" class="headerlink" title="📊 数据管理"></a>📊 数据管理</h3><ul>
+<li><strong>商品信息管理</strong> - 自动获取和同步商品信息，实时更新状态</li>
+<li><strong>订单数据统计</strong> - 详细的订单数据分析和可视化图表</li>
+<li><strong>关键词管理</strong> - 灵活的关键词配置，支持正则表达式</li>
+<li><strong>数据导入导出</strong> - 支持Excel格式的批量数据操作</li>
+<li><strong>自动备份</strong> - 定期自动备份重要数据，防止数据丢失</li>
+</ul>
+<h3 id="🔍-商品搜索"><a href="#🔍-商品搜索" class="headerlink" title="🔍 商品搜索"></a>🔍 商品搜索</h3><ul>
+<li><strong>真实数据获取</strong> - 基于Playwright技术，无头模式获取真实闲鱼商品数据</li>
+<li><strong>多页搜索</strong> - 支持分页搜索和批量获取，无限制数据采集</li>
+<li><strong>智能排序</strong> - 按”人想要”数量自动倒序排列，优先显示热门商品</li>
+<li><strong>数据可视化</strong> - 美观的商品展示界面，支持排序和筛选</li>
+<li><strong>前端分页</strong> - 灵活的前端分页显示，提升用户体验</li>
+<li><strong>账号状态验证</strong> - 自动检查cookies启用状态，确保搜索功能正常</li>
+</ul>
+<h3 id="📱-通知系统"><a href="#📱-通知系统" class="headerlink" title="📱 通知系统"></a>📱 通知系统</h3><ul>
+<li><strong>多渠道支持</strong> - QQ、钉钉、邮件、微信、Telegram等6种通知方式</li>
+<li><strong>智能配置</strong> - 可视化配置界面，支持复杂参数和加密设置</li>
+<li><strong>实时推送</strong> - 重要事件实时通知，及时了解系统状态</li>
+<li><strong>通知模板</strong> - 自定义通知内容和格式，个性化消息推送</li>
+</ul>
+<h3 id="🔐-安全特性"><a href="#🔐-安全特性" class="headerlink" title="🔐 安全特性"></a>🔐 安全特性</h3><ul>
+<li><strong>Cookie安全管理</strong> - 加密存储用户凭证，定期自动刷新</li>
+<li><strong>Token自动刷新</strong> - 智能检测和刷新过期Token，保持连接稳定</li>
+<li><strong>操作日志</strong> - 详细记录所有操作日志，支持审计和追踪</li>
+<li><strong>异常监控</strong> - 实时监控系统异常和错误，主动预警</li>
+</ul>
+<h3 id="🎨-用户界面"><a href="#🎨-用户界面" class="headerlink" title="🎨 用户界面"></a>🎨 用户界面</h3><ul>
+<li><strong>现代化设计</strong> - 基于Bootstrap 5的响应式界面，美观易用</li>
+<li><strong>多主题支持</strong> - 支持明暗主题切换，个性化界面体验</li>
+<li><strong>移动端适配</strong> - 完美适配手机和平板设备，随时随地管理</li>
+<li><strong>实时更新</strong> - 界面数据实时更新，无需手动刷新</li>
+</ul>
+<h2 id="5-2-工具演示"><a href="#5-2-工具演示" class="headerlink" title="5.2 工具演示"></a>5.2 工具演示</h2><h3 id="登录页面"><a href="#登录页面" class="headerlink" title="登录页面"></a>登录页面</h3><p><img src="https://pic1.imgdb.cn/item/68a72d1e58cb8da5c8413d94.png"></p>
+<h3 id="注册页面"><a href="#注册页面" class="headerlink" title="注册页面"></a>注册页面</h3><p><img src="https://pic1.imgdb.cn/item/68a72d4c58cb8da5c8413d98.png"></p>
+<h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p><img src="https://pic1.imgdb.cn/item/68a72d6f58cb8da5c8413db3.png"></p>
+<h3 id="账号管理"><a href="#账号管理" class="headerlink" title="账号管理"></a>账号管理</h3><p><img src="https://pic1.imgdb.cn/item/68a72d8958cb8da5c8413dcc.png"></p>
+<h3 id="商品管理"><a href="#商品管理" class="headerlink" title="商品管理"></a>商品管理</h3><p><img src="https://pic1.imgdb.cn/item/68a72da058cb8da5c8413ddf.png"></p>
+<h3 id="订单管理"><a href="#订单管理" class="headerlink" title="订单管理"></a>订单管理</h3><p><img src="https://pic1.imgdb.cn/item/68a72db858cb8da5c8413de6.png"></p>
+<h3 id="自动回复"><a href="#自动回复" class="headerlink" title="自动回复"></a>自动回复</h3><p><img src="https://pic1.imgdb.cn/item/68a72dd958cb8da5c8413def.png"></p>
+<h3 id="指定商品回复"><a href="#指定商品回复" class="headerlink" title="指定商品回复"></a>指定商品回复</h3><p><img src="https://pic1.imgdb.cn/item/68a72df758cb8da5c8413df4.png"></p>
+<h3 id="自动发货"><a href="#自动发货" class="headerlink" title="自动发货"></a>自动发货</h3><p><img src="https://pic1.imgdb.cn/item/68a72e1558cb8da5c8413df9.png"></p>
+<h3 id="消息通知支持平台"><a href="#消息通知支持平台" class="headerlink" title="消息通知支持平台"></a>消息通知支持平台</h3><p><img src="https://pic1.imgdb.cn/item/68a72e4d58cb8da5c8413e15.png"></p>
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><p><img src="https://pic1.imgdb.cn/item/68a72e6358cb8da5c8413e1a.png"></p>
+<h2 id="6-结尾想说的话"><a href="#6-结尾想说的话" class="headerlink" title="6-结尾想说的话"></a>6-结尾想说的话</h2><ul>
+<li>需要技术文章,记得将ycc77.com 添加到书签栏哦~</li>
+<li>需要资源,记得将yancy77.cn 添加到书签栏哦~</li>
+<li>B站: 疯狂的杨CC(需要使用视频,请选择这个)</li>
+<li>抖音: 疯狂的杨CC</li>
+<li>快手: 疯狂的杨CC</li>
+<li>P站: 疯狂的杨CC</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Ycc77.com">杨CC</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://ycc77.com/2025/08/21/1-%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B71_%E5%92%B8%E9%B1%BC%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D/">https://ycc77.com/2025/08/21/1-%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B71_%E5%92%B8%E9%B1%BC%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/">工具教程</a><a class="post-meta__tags" href="/tags/%E9%97%B2%E9%B1%BC/">闲鱼</a></div><div class="post-share"><div class="social-share" data-image="https://pic1.imgdb.cn/item/68a725f358cb8da5c84137f9.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/08/22/2-JSAPlscan-JS%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/" title="JSAPIscan 扫描工具_安装以及使用"><img class="cover" src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">JSAPIscan 扫描工具_安装以及使用</div></div><div class="info-2"><div class="info-item-1">1-简介​	注意: 该软件非开源软件,请自行掂量. ​	一个go语言开发的js文件发现和接口扫描工具，专门用于从JavaScript文件中提取API接口信息并进行安全测试。 2-功能特性 🔍 智能API发现: 自动从JavaScript文件中提取API端点路径 📱 多框架支持: 支持Webpack、Vue、React等现代前端框架的JS文件解析 🚀 高性能扫描: 多线程并发处理，支持自定义线程数 🛡️ 安全测试: 内置未授权访问测试和POC验证功能（POC预计0.3开放） 📊 智能输出: 自动生成CSV报告和详细日志 🔧 灵活配置: 支持批量URL扫描、自定义深度等 📁 自动管理: 自动创建时间戳文件夹，结果分类存储  3-下载安装​	浏览器访问：https://pan.quark.cn/s/67b7123b8cbf ​	此链接包含Windows\Linux 双版本,下载后可直接进行使用. 4-使用教程4.1 Linux 使用教程1.\JSAPIscan_linux -h # 查看帮助   4.2 Windows 使用教程1JSAPIscan_windows.exe...</div></div></div></a><a class="pagination-related" href="/2025/08/20/google-chrome-%E5%8F%96%E8%AF%81/" title="测试文章"><img class="cover" src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">测试文章</div></div><div class="info-2"><div class="info-item-1">1-简介谢谢小星星 </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/08/29/10-%E6%9D%A8CC%E8%B5%84%E6%BA%90%E7%AB%99/" title="yancy77.cn(详细说明)-一个专属于黑客的资源站"><img class="cover" src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-29</div><div class="info-item-2">yancy77.cn(详细说明)-一个专属于黑客的资源站</div></div><div class="info-2"><div class="info-item-1">1- 杨CC对工具的评价​	这是我自己的一个网站,是一个非常适合缺乏工具的一些渗透师傅,或者想要学习黑客技术的小白,这款网站都非常适合. ​	而且在网站中,也可以找到自己任何想要的工具. 2- 网站分类简介 首页  而且首页还包含了最新发现的免杀.工具 渗透测试工具  而且渗透测试工具中,也包含了多种分类.当前共计16个分类,分别为: 信息收集工具\爆破工具\在线工具\注入工具\远控工具\逆向工具\漏洞扫描工具\内网工具\字典工具\流量&#x2F;测压工具\综合工具包\防御&#x2F;蓝队工具\POC&#x2F;EXP模块\Webshell板块\插件板块\靶场搭建工具等多个板块. 游戏资源.  游戏资源包含了pc游戏\手机游戏\以及一些修改器,而且如果可以的话,并且可能会包含一些Steam上的十八加的游戏. 教程资源  教程资源包,包含了如何训练AI模型\取证的学习\编程学习\从0开始学习渗透\也包含一些国学,都会在内. 其他资源  其他资源中,包含了设计师的资源\源码&#x2F;毕业设计的源代码(包含论文)\电脑常用工具\手机工具\一些镜像\或者一些其他资源,其他资源中也包含了...</div></div></div></a><a class="pagination-related" href="/2025/09/02/11-web-check_%E5%85%A8%E8%83%BD%E7%BD%91%E7%AB%99%E7%9B%91%E6%B5%8B/" title="web-check_网站全能信息收集工具"><img class="cover" src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-02</div><div class="info-item-2">web-check_网站全能信息收集工具</div></div><div class="info-2"><div class="info-item-1">1- 杨CC对工具的评价​	方便又快捷,但对国外的网站收集效率较高,国内的网站稍微差点,但整体来讲还算不错. 2- 在线演示 https://web-check.xyz/ 访问上方网站,然后按照图片方式进行操作  实际情况如下图  获取情况如下  中文界面如下:   3- 本地搭建3.1 使用Docker搭建(推荐) 安装docker教程,请点击:https://ycc77.com/2025/09/02/12-%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85docker/  Linux   123# 需要提前安装docker,宝塔和1p都可以正常搭建docker run -p 3000:3000 lissy93/web-check# 随后访问:localhost:3000 即可正常访问   Windows  123# 需要提前安装docker-desktop ,并且运行docker-desktopdocker run -p 3000:3000 lissy93/web-check# 随后访问:localhost:3000 即可正常访问   ...</div></div></div></a><a class="pagination-related" href="/2025/09/02/12-%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85docker/" title="docker全系统安装教程"><img class="cover" src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-02</div><div class="info-item-2">docker全系统安装教程</div></div><div class="info-2"><div class="info-item-1">1- 杨CC对工具的评价​	一个非常牛逼的容器工具.没有之二. 2- 安装教程2.1 Linux 系列安装docker教程2.1.1 ubuntu系列 ubuntu 24.02 &amp; Ubuntu 22 &amp; Ubuntu 20  123456789101112131415161718192021222324# Ubuntu 24/22/20 所有安装方式一致# 更新库sudo apt install update# 安装必要依赖包sudo apt install -y apt-transport-https ca-certificates curl software-properties-common# 添加Docker 官方GPG秘钥curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg# 添加Docker 软件源echo &quot;deb [arch=$(dpkg ...</div></div></div></a><a class="pagination-related" href="/2025/09/03/13-%E5%AE%89%E5%8D%93%E8%BF%9C%E6%8E%A7_%E5%B1%80%E5%9F%9F%E7%BD%91_%E6%89%8B%E6%9C%BA%E6%97%A0%E6%8F%90%E7%A4%BA/" title="安卓远控_局域网_手机无提示(Windows控制安卓手机)"><img class="cover" src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-03</div><div class="info-item-2">安卓远控_局域网_手机无提示(Windows控制安卓手机)</div></div><div class="info-2"><div class="info-item-1">1- 杨CC对工具的评价​	Windows远控安卓的一个工具,整体非常轻量化,基于adb进行远控,很好用,但是需要开启无线调试.并且需要在同一个WIFI下,才可使用,适合家庭内部的监控. ​	但是手机上会出现一个无线调试的任务栏按钮. 2- 功能介绍 软件下载地址:https://pan.quark.cn/s/8c8b3683663c  部分功能如下:  核心功能为:  屏幕监控\屏幕控制\屏幕截图\文件管理\终端调试\定时任务\安装app\打开app\上传文件\运行脚本等  按键分为:  切换键\主屏幕\返回键\关闭屏幕\电源键\音量控制\旋转屏幕等.  其他可接收的信息为:  电量\充电状态\设备温度\驱动来源\电压等  注意:上方包含了软件大部分功能.  部分功能截图如下:        大概就是上方的功能   3- 使用方式 首先你需要拿到对方手机约30秒的时间准备.  我这里以小米手机为例:  打开 设置 - &gt; 我的设备 -&gt; 连续点击OS版本10次,直到出现了截图的提示:    然后,打开回退到设置主界面  找到更多设置 -&gt; 开发者选项 -&gt...</div></div></div></a><a class="pagination-related" href="/2025/09/04/14-%E5%BC%80%E6%BA%90%E4%BB%A3%E7%90%86%E6%B1%A0_Yccol_%E5%85%A8%E5%A5%97/" title="Yccol_开源代理池全套工具_包含_API_PRO_基础版_GUI版"><img class="cover" src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-04</div><div class="info-item-2">Yccol_开源代理池全套工具_包含_API_PRO_基础版_GUI版</div></div><div class="info-2"><div class="info-item-1">1- 杨CC对工具的评价​	YCCOL 代理池开源了,包含___API_PRO版本_基础版_GUI版,等多个版本,同时也包含了数据库信息验证,相对而言比较全面.理论来讲同样可商用. ​	开源地址:https://github.com/Sgyling/yccol ​	本项目使用:Apache License Version 2.0 条款. 免责条款 无担保承诺：明确软件以 “现状（AS IS）” 形式提供，ASF 及贡献者不提供任何明示或隐含的担保，比如不保证软件功能正常、无缺陷，也不保证软件能满足用户的特定需求（如商业场景下的稳定性、兼容性）。 限制损害赔偿：除法律强制要求的情形外，ASF 及贡献者不对因使用或无法使用软件造成的任何间接损害（如商业损失、数据丢失、业务中断等）承担赔偿责任，仅可能对直接损害承担责任（需符合法律规定）。  版权说明 保留基础声明：用户在使用、复制、分发（包括商用分发）或修改软件时，必须在软件的所有副本或衍生版本中，完整保留原始的版权声明文本、本协议条款声明，以及软件中包含的免责声明内容。 标注修改内容：若用户对软件进行了修改（如二次开发），需在修改部...</div></div></div></a><a class="pagination-related" href="/2025/09/04/15-IDA_PRO_9.2%E7%A0%B4%E8%A7%A3%E7%89%88/" title="IDA_PRO_9.2_破解版"><img class="cover" src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-04</div><div class="info-item-2">IDA_PRO_9.2_破解版</div></div><div class="info-2"><div class="info-item-1">1- 杨CC对工具的评价​	该软件为:IDA_PRO_9.2最新破解版.逆向必备软件 2- 软件下载 访问:https://pan.quark.cn/s/21f13b2fff94 链接,进行下载. 文件中存在多个版本,分别为:MacOS\Linux\Windows 三个版本. 截图如下:  按照自己的系统版本下载即可  3- 破解教程 我们以Windows为例: 下载Windows版本,然后将:idakeygen.py,存放在安装目录  然后复制路径在终端中打开.运行python idakeygen.py 注意:在运行脚本前,一定要先运行一遍ida.exe,然后再次运行脚本.否则可能会出现错误.  注意:在运行脚本前,一定要先运行一遍ida.exe,然后再次运行脚本.否则可能会出现错误.  4- 截图实例        5- 结束语 需要技术文章,记得将ycc77.com 添加到书签栏哦~ 需要资源,记得将yancy77.cn 添加到书签栏哦~ B站: 疯狂的杨CC 抖音: 疯狂的杨CC 快手: 疯狂的杨CC 91: 疯狂的杨CC p站: 疯狂的杨CC  </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">杨CC</div><div class="author-info-description">这是一个非常不错的技术文章站点,包含森罗万物</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">36</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/SGYLING"><i class="fab fa-github"></i><span>我的Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Sgyling" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">有任何疑惑或者需要投稿,请联系:<br>
+微信: Yancy_76<br>
+或 QQ: 1041041042 <br>
+QQ交流群: 660264846 <br>
+微信交流群:请添加:Yancy_76
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">1-简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7"><span class="toc-number">2.</span> <span class="toc-text">2-核心特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%90-%E5%A4%9A%E7%94%A8%E6%88%B7%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.0.1.</span> <span class="toc-text">🔐 多用户系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%B1-%E5%A4%9A%E8%B4%A6%E5%8F%B7%E7%AE%A1%E7%90%86"><span class="toc-number">2.0.2.</span> <span class="toc-text">📱 多账号管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A4%96-%E6%99%BA%E8%83%BD%E5%9B%9E%E5%A4%8D%E7%B3%BB%E7%BB%9F"><span class="toc-number">2.0.3.</span> <span class="toc-text">🤖 智能回复系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%9A-%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B4%A7%E5%8A%9F%E8%83%BD"><span class="toc-number">2.0.4.</span> <span class="toc-text">🚚 自动发货功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9B%8D%EF%B8%8F-%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86"><span class="toc-number">2.0.5.</span> <span class="toc-text">🛍️ 商品管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-%E5%95%86%E5%93%81%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="toc-number">2.0.6.</span> <span class="toc-text">🔍 商品搜索功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8A-%E7%B3%BB%E7%BB%9F%E7%9B%91%E6%8E%A7"><span class="toc-number">2.0.7.</span> <span class="toc-text">📊 系统监控</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%81-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86"><span class="toc-number">2.0.8.</span> <span class="toc-text">📁 数据管理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">3-项目结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">4-安装以及使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="toc-number">4.0.1.</span> <span class="toc-text">环境要求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E5%B0%8F%E7%99%BD%E5%AE%89%E8%A3%85-%E5%AE%89%E8%A3%85%E5%8D%B3%E7%94%A8"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 小白安装(安装即用)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-1-%E5%AE%89%E8%A3%85Docker"><span class="toc-number">4.1.1.</span> <span class="toc-text">4.1.1 安装Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-2-Linux-Mac-OS-%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-number">4.1.2.</span> <span class="toc-text">4.1.2 Linux\Mac OS 本地安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-3-Windows-%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-number">4.1.3.</span> <span class="toc-text">4.1.3 Windows 本地安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-4-%E4%BA%91%E7%AB%AF%E5%AE%89%E8%A3%85"><span class="toc-number">4.1.4.</span> <span class="toc-text">4.1.4 云端安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E6%BA%90%E7%A0%81%E6%9E%84%E5%BB%BA%E9%83%A8%E7%BD%B2-%E6%8E%A8%E8%8D%90%E8%B5%84%E6%B7%B1%E7%8E%A9%E5%AE%B6%E9%83%A8%E7%BD%B2"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 源码构建部署(推荐资深玩家部署)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-Linux-MAC-OS-%E6%9E%84%E5%BB%BA"><span class="toc-number">4.2.1.</span> <span class="toc-text">4.2.1 Linux\MAC OS 构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-Windows-%E6%9E%84%E5%BB%BA"><span class="toc-number">4.2.2.</span> <span class="toc-text">4.2.2 Windows 构建</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%E4%BB%A5%E5%8F%8A%E6%BC%94%E7%A4%BA"><span class="toc-number">5.</span> <span class="toc-text">5-核心功能以及演示</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 核心功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D%E7%B3%BB%E7%BB%9F"><span class="toc-number">5.1.1.</span> <span class="toc-text">🚀 自动回复系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9B%92-%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B4%A7%E7%B3%BB%E7%BB%9F"><span class="toc-number">5.1.2.</span> <span class="toc-text">🛒 自动发货系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%91%A5-%E5%A4%9A%E7%94%A8%E6%88%B7%E7%B3%BB%E7%BB%9F"><span class="toc-number">5.1.3.</span> <span class="toc-text">👥 多用户系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8A-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86"><span class="toc-number">5.1.4.</span> <span class="toc-text">📊 数据管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-%E5%95%86%E5%93%81%E6%90%9C%E7%B4%A2"><span class="toc-number">5.1.5.</span> <span class="toc-text">🔍 商品搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%B1-%E9%80%9A%E7%9F%A5%E7%B3%BB%E7%BB%9F"><span class="toc-number">5.1.6.</span> <span class="toc-text">📱 通知系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%90-%E5%AE%89%E5%85%A8%E7%89%B9%E6%80%A7"><span class="toc-number">5.1.7.</span> <span class="toc-text">🔐 安全特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%A8-%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2"><span class="toc-number">5.1.8.</span> <span class="toc-text">🎨 用户界面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E5%B7%A5%E5%85%B7%E6%BC%94%E7%A4%BA"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 工具演示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2"><span class="toc-number">5.2.1.</span> <span class="toc-text">登录页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2"><span class="toc-number">5.2.2.</span> <span class="toc-text">注册页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5"><span class="toc-number">5.2.3.</span> <span class="toc-text">首页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7%E7%AE%A1%E7%90%86"><span class="toc-number">5.2.4.</span> <span class="toc-text">账号管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%93%81%E7%AE%A1%E7%90%86"><span class="toc-number">5.2.5.</span> <span class="toc-text">商品管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E7%AE%A1%E7%90%86"><span class="toc-number">5.2.6.</span> <span class="toc-text">订单管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D"><span class="toc-number">5.2.7.</span> <span class="toc-text">自动回复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E5%95%86%E5%93%81%E5%9B%9E%E5%A4%8D"><span class="toc-number">5.2.8.</span> <span class="toc-text">指定商品回复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B4%A7"><span class="toc-number">5.2.9.</span> <span class="toc-text">自动发货</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E6%94%AF%E6%8C%81%E5%B9%B3%E5%8F%B0"><span class="toc-number">5.2.10.</span> <span class="toc-text">消息通知支持平台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">5.2.11.</span> <span class="toc-text">用户管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%BB%93%E5%B0%BE%E6%83%B3%E8%AF%B4%E7%9A%84%E8%AF%9D"><span class="toc-number">5.3.</span> <span class="toc-text">6-结尾想说的话</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/09/21/26-%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E4%BB%A3%E7%90%86%E6%B1%A0/" title="如何部署长期代理池?—Yccol-杨CC"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何部署长期代理池?—Yccol-杨CC"/></a><div class="content"><a class="title" href="/2025/09/21/26-%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E4%BB%A3%E7%90%86%E6%B1%A0/" title="如何部署长期代理池?—Yccol-杨CC">如何部署长期代理池?—Yccol-杨CC</a><time datetime="2025-09-20T16:50:30.000Z" title="Created 2025-09-21 00:50:30">2025-09-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/15/24-Linux-%E6%8E%A7%E5%88%B6%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%B7%A5%E5%85%B7/" title="Linux-控制安卓手机工具"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux-控制安卓手机工具"/></a><div class="content"><a class="title" href="/2025/09/15/24-Linux-%E6%8E%A7%E5%88%B6%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E5%B7%A5%E5%85%B7/" title="Linux-控制安卓手机工具">Linux-控制安卓手机工具</a><time datetime="2025-09-14T16:50:30.000Z" title="Created 2025-09-15 00:50:30">2025-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/15/25-Windows%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%B7%A5%E5%85%B7/" title="数据恢复工具-支持Windows(特殊操作下可以恢复Linux和手机数据)"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据恢复工具-支持Windows(特殊操作下可以恢复Linux和手机数据)"/></a><div class="content"><a class="title" href="/2025/09/15/25-Windows%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%B7%A5%E5%85%B7/" title="数据恢复工具-支持Windows(特殊操作下可以恢复Linux和手机数据)">数据恢复工具-支持Windows(特殊操作下可以恢复Linux和手机数据)</a><time datetime="2025-09-14T16:50:30.000Z" title="Created 2025-09-15 00:50:30">2025-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/14/23-Windows-Linux-amc%E5%AE%89%E8%A3%85vmware%E8%99%9A%E6%8B%9F%E6%9C%BA/" title="Windows-Linux-amc全系统安装vmware虚拟机"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows-Linux-amc全系统安装vmware虚拟机"/></a><div class="content"><a class="title" href="/2025/09/14/23-Windows-Linux-amc%E5%AE%89%E8%A3%85vmware%E8%99%9A%E6%8B%9F%E6%9C%BA/" title="Windows-Linux-amc全系统安装vmware虚拟机">Windows-Linux-amc全系统安装vmware虚拟机</a><time datetime="2025-09-14T04:50:30.000Z" title="Created 2025-09-14 12:50:30">2025-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/14/22-%20%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8F%8D%E6%A3%80%E6%B5%8B%E6%8A%80%E6%9C%AF/" title="vmware虚拟机反检测-绕过虚拟机检测教程"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vmware虚拟机反检测-绕过虚拟机检测教程"/></a><div class="content"><a class="title" href="/2025/09/14/22-%20%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8F%8D%E6%A3%80%E6%B5%8B%E6%8A%80%E6%9C%AF/" title="vmware虚拟机反检测-绕过虚拟机检测教程">vmware虚拟机反检测-绕过虚拟机检测教程</a><time datetime="2025-09-14T03:50:30.000Z" title="Created 2025-09-14 11:50:30">2025-09-14</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 杨CC</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'Sgyling/guo_xue',
+      'data-repo-id': 'R_kgDONd3ItA',
+      'data-category-id': 'DIC_kwDONd3ItM4Cva9K',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="990" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索你想知道的事情" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

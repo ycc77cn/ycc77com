@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Category: 渗透常见问题 | 杨CC 技术录</title><meta name="author" content="杨CC"><meta name="copyright" content="杨CC"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这是一个非常不错的技术文章站点,包含森罗万物">
+<meta property="og:type" content="website">
+<meta property="og:title" content="杨CC 技术录">
+<meta property="og:url" content="https://ycc77.com/categories/%E6%B8%97%E9%80%8F%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="杨CC 技术录">
+<meta property="og:description" content="这是一个非常不错的技术文章站点,包含森罗万物">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png">
+<meta property="article:author" content="杨CC">
+<meta property="article:tag" content="黑客,技术,技术文章,渗透工具,发展中，疯狂的杨CC， ...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png"><link rel="canonical" href="https://ycc77.com/categories/%E6%B8%97%E9%80%8F%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Category: 渗透常见问题',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'category'
+}</script><!-- 异步加载统计脚本--><script async src="https://0198bc58-ac63-71ed-a536-46941550f9e1.ustat1.com/ustat.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page fixed" id="page-header" style="background-image: url(https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" alt="Logo"><span class="site-name">杨CC 技术录</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">渗透常见问题</h1></div></header><main class="layout" id="content-inner"><div id="category"><div class="article-sort-title">Category - 渗透常见问题</div><div class="article-sort"><div class="article-sort-item year">2025</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2025/08/23/5-%E4%B8%8A%E4%BC%A0%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E5%90%8E_%E8%BF%9E%E6%8E%A5%E5%90%8E%E8%A2%AB%E5%BC%BA%E5%88%B6%E4%B8%8B%E7%BA%BF_%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E5%8E%9F%E5%9B%A0%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="上传木马后,频繁被下线的原因以及解决方案"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" alt="上传木马后,频繁被下线的原因以及解决方案" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-08-23T12:50:30.000Z" title="Created 2025-08-23 20:50:30">2025-08-23</time></div><a class="article-sort-item-title" href="/2025/08/23/5-%E4%B8%8A%E4%BC%A0%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E5%90%8E_%E8%BF%9E%E6%8E%A5%E5%90%8E%E8%A2%AB%E5%BC%BA%E5%88%B6%E4%B8%8B%E7%BA%BF_%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E5%8E%9F%E5%9B%A0%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="上传木马后,频繁被下线的原因以及解决方案">上传木马后,频繁被下线的原因以及解决方案</a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">杨CC</div><div class="author-info-description">这是一个非常不错的技术文章站点,包含森罗万物</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/SGYLING"><i class="fab fa-github"></i><span>我的Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Sgyling" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">有任何疑惑或者需要投稿,请联系:<br>
+微信: Yancy_76<br>
+或 QQ: 1041041042 <br>
+QQ交流群: 660264846 <br>
+微信交流群:请添加:Yancy_76
+</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/08/23/5-%E4%B8%8A%E4%BC%A0%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E5%90%8E_%E8%BF%9E%E6%8E%A5%E5%90%8E%E8%A2%AB%E5%BC%BA%E5%88%B6%E4%B8%8B%E7%BA%BF_%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E5%8E%9F%E5%9B%A0%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="上传木马后,频繁被下线的原因以及解决方案"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="上传木马后,频繁被下线的原因以及解决方案"/></a><div class="content"><a class="title" href="/2025/08/23/5-%E4%B8%8A%E4%BC%A0%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%9C%A8%E9%A9%AC%E5%90%8E_%E8%BF%9E%E6%8E%A5%E5%90%8E%E8%A2%AB%E5%BC%BA%E5%88%B6%E4%B8%8B%E7%BA%BF_%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E5%8E%9F%E5%9B%A0%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="上传木马后,频繁被下线的原因以及解决方案">上传木马后,频繁被下线的原因以及解决方案</a><time datetime="2025-08-23T12:50:30.000Z" title="Created 2025-08-23 20:50:30">2025-08-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/23/4-%E5%B9%BB%E5%BD%B1(Phantom)Src%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/" title="幻影（Phantom）SRC漏洞挖掘辅助工具"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="幻影（Phantom）SRC漏洞挖掘辅助工具"/></a><div class="content"><a class="title" href="/2025/08/23/4-%E5%B9%BB%E5%BD%B1(Phantom)Src%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/" title="幻影（Phantom）SRC漏洞挖掘辅助工具">幻影（Phantom）SRC漏洞挖掘辅助工具</a><time datetime="2025-08-23T12:26:30.000Z" title="Created 2025-08-23 20:26:30">2025-08-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/22/3-Svae%20Multiple%20URLs_%E5%BF%AB%E9%80%9F%E4%BF%9D%E5%AD%98%E5%BD%93%E5%89%8D%E6%89%80%E6%9C%89%E6%89%93%E5%BC%80%E7%BD%91%E9%A1%B5%E7%9A%84URL/" title="Save Multiple URLs_快速获取网页中URL的浏览器插件"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Save Multiple URLs_快速获取网页中URL的浏览器插件"/></a><div class="content"><a class="title" href="/2025/08/22/3-Svae%20Multiple%20URLs_%E5%BF%AB%E9%80%9F%E4%BF%9D%E5%AD%98%E5%BD%93%E5%89%8D%E6%89%80%E6%9C%89%E6%89%93%E5%BC%80%E7%BD%91%E9%A1%B5%E7%9A%84URL/" title="Save Multiple URLs_快速获取网页中URL的浏览器插件">Save Multiple URLs_快速获取网页中URL的浏览器插件</a><time datetime="2025-08-22T12:26:30.000Z" title="Created 2025-08-22 20:26:30">2025-08-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/22/2-JSAPlscan-JS%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/" title="JSAPIscan 扫描工具_安装以及使用"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JSAPIscan 扫描工具_安装以及使用"/></a><div class="content"><a class="title" href="/2025/08/22/2-JSAPlscan-JS%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/" title="JSAPIscan 扫描工具_安装以及使用">JSAPIscan 扫描工具_安装以及使用</a><time datetime="2025-08-22T09:26:30.000Z" title="Created 2025-08-22 17:26:30">2025-08-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/21/1-%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B71_%E5%92%B8%E9%B1%BC%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D/" title="一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程"><img src="https://pic1.imgdb.cn/item/68a725f358cb8da5c84137f9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程"/></a><div class="content"><a class="title" href="/2025/08/21/1-%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B71_%E5%92%B8%E9%B1%BC%E8%87%AA%E5%8A%A8%E5%9B%9E%E5%A4%8D/" title="一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程">一款支持闲鱼自动回复\自动发货的神奇工具-带安装教程</a><time datetime="2025-08-21T09:26:30.000Z" title="Created 2025-08-21 17:26:30">2025-08-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">渗透工具</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%97%E9%80%8F%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"><span class="card-category-list-name">渗透常见问题</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">电商工具</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/"><span class="card-category-list-name">电子取证</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E5%8F%96%E8%AF%81%E6%8A%80%E6%9C%AF/" style="font-size: 1.1em; color: #999">取证技术</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" style="font-size: 1.5em; color: #99a9bf">浏览器插件</a> <a href="/tags/SRC%E6%8C%96%E6%8E%98/" style="font-size: 1.1em; color: #999">SRC挖掘</a> <a href="/tags/%E6%B8%97%E9%80%8F%E9%97%AE%E7%AD%94/" style="font-size: 1.1em; color: #999">渗透问答</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">工具教程</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 1.1em; color: #999">浏览器</a> <a href="/tags/%E9%97%B2%E9%B1%BC/" style="font-size: 1.1em; color: #999">闲鱼</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">信息收集工具</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/08/">
+            <span class="card-archive-list-date">
+              August 2025
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-08-23T13:15:33.138Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 杨CC</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索你想知道的事情" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -1,0 +1,270 @@
+/* 封面图片专用样式 - 确保完整显示 */
+
+/* 重置默认的封面样式，确保完整显示 */
+.post-cover-container {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, rgba(var(--secondary-color), 0.8) 100%) !important;
+  border: 1px solid var(--border-color) !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 300px !important;
+  max-height: 500px !important;
+  overflow: hidden !important;
+}
+
+/* 文章详情页封面图片 - 完整显示不裁剪 */
+.post-cover-image {
+  /* 确保图片完整显示，不被裁剪 */
+  object-fit: contain !important;
+  object-position: center !important;
+  
+  /* 添加内边距，避免图片贴边 */
+  padding: 10px !important;
+  
+  /* 确保图片不会超出容器 */
+  max-width: calc(100% - 20px) !important;
+  max-height: calc(100% - 20px) !important;
+  
+  /* 居中显示 */
+  margin: auto !important;
+  display: block !important;
+  
+  /* 保持宽高比 */
+  width: auto !important;
+  height: auto !important;
+}
+
+/* 首页文章卡片封面容器 - 强制样式 */
+.post-card-cover {
+  background-color: var(--secondary-color) !important;
+  border: 1px solid var(--border-color) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 200px !important;
+  aspect-ratio: 3/2 !important;
+}
+
+/* 首页文章卡片封面图片 - 完整显示不裁剪 */
+.post-card-cover-image {
+  object-fit: contain !important;
+  object-position: center !important;
+  transition: all 0.3s ease !important;
+  padding: 8px !important;
+  max-width: calc(100% - 16px) !important;
+  max-height: calc(100% - 16px) !important;
+  display: block !important;
+  margin: auto !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* 覆盖可能的Tailwind样式冲突 */
+.aspect-\[3\/2\] .post-card-cover-image {
+  object-fit: contain !important;
+}
+
+/* 确保背景图片方式被完全禁用 */
+.post-card-cover[style*="background-image"] {
+  background-image: none !important;
+  background-size: auto !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 悬停效果 */
+.post-cover-image:hover {
+  transform: scale(1.01) !important;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.group:hover .post-card-cover-image {
+  transform: scale(1.02) !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .post-cover-container {
+    min-height: 200px !important;
+    max-height: 300px !important;
+  }
+  
+  .post-cover-image {
+    padding: 8px !important;
+    max-width: calc(100% - 16px) !important;
+    max-height: calc(100% - 16px) !important;
+  }
+  
+  .post-card-cover {
+    min-height: 150px !important;
+    aspect-ratio: 3/2 !important;
+  }
+  
+  .post-card-cover-image {
+    padding: 6px !important;
+    max-width: calc(100% - 12px) !important;
+    max-height: calc(100% - 12px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-cover-container {
+    min-height: 180px !important;
+    max-height: 250px !important;
+  }
+  
+  .post-cover-image {
+    padding: 6px !important;
+    max-width: calc(100% - 12px) !important;
+    max-height: calc(100% - 12px) !important;
+  }
+  
+  .post-card-cover-image {
+    padding: 4px !important;
+    max-width: calc(100% - 8px) !important;
+    max-height: calc(100% - 8px) !important;
+  }
+}
+
+/* 加载状态优化 */
+.post-cover-image[style*="opacity: 0"],
+.post-card-cover-image[style*="opacity: 0"] {
+  background: linear-gradient(90deg, 
+    var(--secondary-color) 25%, 
+    rgba(var(--secondary-color), 0.8) 50%, 
+    var(--secondary-color) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 图片加载失败时的样式 */
+.post-cover-image:not([src]),
+.post-cover-image[src=""],
+.post-cover-image[src="#"],
+.post-card-cover-image:not([src]),
+.post-card-cover-image[src=""],
+.post-card-cover-image[src="#"] {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white;
+  font-size: 2rem;
+  opacity: 0.7;
+  min-height: 100px;
+}
+
+.post-cover-image:not([src])::before,
+.post-cover-image[src=""]::before,
+.post-cover-image[src="#"]::before,
+.post-card-cover-image:not([src])::before,
+.post-card-cover-image[src=""]::before,
+.post-card-cover-image[src="#"]::before {
+  content: "🖼️";
+  font-size: 3rem;
+}
+
+/* 深色模式优化 */
+@media (prefers-color-scheme: dark) {
+  .post-cover-container {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .post-card-cover {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+/* 确保Tailwind的aspect-ratio正常工作 */
+.aspect-\[3\/2\] {
+  aspect-ratio: 3/2 !important;
+}
+
+/* 强制覆盖可能冲突的样式 */
+.post-cover-container .post-cover-image {
+  object-fit: contain !important;
+}
+
+.post-card-cover .post-card-cover-image {
+  object-fit: contain !important;
+}
+
+/* 无障碍优化 */
+@media (prefers-reduced-motion: reduce) {
+  .post-cover-image,
+  .post-card-cover-image {
+    transition: none !important;
+  }
+  
+  .post-cover-image:hover,
+  .post-card-cover-image:hover,
+  .group:hover .post-card-cover-image {
+    transform: none !important;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .post-cover-container,
+  .post-card-cover {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    background: white !important;
+  }
+  
+  .post-cover-image,
+  .post-card-cover-image {
+    box-shadow: none !important;
+  }
+}
+
+/* 最高优先级规则 - 确保首页封面完整显示 */
+article.group .post-card-cover {
+  background-image: none !important;
+  background-size: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+article.group .post-card-cover img,
+article.group .post-card-cover .post-card-cover-image {
+  object-fit: contain !important;
+  object-position: center !important;
+  max-width: calc(100% - 16px) !important;
+  max-height: calc(100% - 16px) !important;
+  width: auto !important;
+  height: auto !important;
+  display: block !important;
+  margin: auto !important;
+}
+
+/* 覆盖任何可能的背景图片样式 */
+.group > div > div[style*="background-image"] {
+  background-image: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 确保aspect-ratio容器正确工作 */
+.aspect-\[3\/2\] {
+  aspect-ratio: 3/2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

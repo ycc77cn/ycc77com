@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <title>JSAPIscan 扫描工具_安装以及使用 | 杨CC 技术录</title>
+    <meta name="author" content="杨CC" />
+    <meta name="description" content="这是一个非常不错的技术文章站点,包含森罗万物" />
+    <meta name="keywords" content="黑客,技术,技术文章,渗透工具,发展中..." />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="https://pic1.imgdb.cn/item/68a3e56758cb8da5c834abbf.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>杨CC 技术录</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分类</span>
+        </a>
+        
+        <a href="/tags/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于我</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;杨CC 技术录</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分类</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于我</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>JSAPIscan 扫描工具_安装以及使用</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/8/21
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                渗透工具
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/" style="color: #03a9f4">
+                    工具教程
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1-简介"></a>1-简介</h1><p>​	注意: 该软件非开源软件,请自行掂量.</p>
+<p>​	一个go语言开发的js文件发现和接口扫描工具，专门用于从JavaScript文件中提取API接口信息并进行安全测试。</p>
+<h1 id="2-功能特性"><a href="#2-功能特性" class="headerlink" title="2-功能特性"></a>2-功能特性</h1><ul>
+<li><strong>🔍 智能API发现</strong>: 自动从JavaScript文件中提取API端点路径</li>
+<li><strong>📱 多框架支持</strong>: 支持Webpack、Vue、React等现代前端框架的JS文件解析</li>
+<li><strong>🚀 高性能扫描</strong>: 多线程并发处理，支持自定义线程数</li>
+<li><strong>🛡️ 安全测试</strong>: 内置未授权访问测试和POC验证功能（POC预计0.3开放）</li>
+<li><strong>📊 智能输出</strong>: 自动生成CSV报告和详细日志</li>
+<li><strong>🔧 灵活配置</strong>: 支持批量URL扫描、自定义深度等</li>
+<li><strong>📁 自动管理</strong>: 自动创建时间戳文件夹，结果分类存储</li>
+</ul>
+<h1 id="3-下载安装"><a href="#3-下载安装" class="headerlink" title="3-下载安装"></a>3-下载安装</h1><p>​	浏览器访问：<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/67b7123b8cbf">https://pan.quark.cn/s/67b7123b8cbf</a></p>
+<p>​	此链接包含Windows\Linux 双版本,下载后可直接进行使用.</p>
+<h1 id="4-使用教程"><a href="#4-使用教程" class="headerlink" title="4-使用教程"></a>4-使用教程</h1><h2 id="4-1-Linux-使用教程"><a href="#4-1-Linux-使用教程" class="headerlink" title="4.1 Linux 使用教程"></a>4.1 Linux 使用教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 先下载连接中的 JSAPIscan_Linux</span><br><span class="line"># 打开Linux终端,cd进入目录</span><br><span class="line"># 运行</span><br><span class="line">.\JSAPIscan_linux -h # 查看帮助</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic1.imgdb.cn/item/68a84fe658cb8da5c842d1a2.png"></p>
+<h2 id="4-2-Windows-使用教程"><a href="#4-2-Windows-使用教程" class="headerlink" title="4.2 Windows 使用教程"></a>4.2 Windows 使用教程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 由于我的终端使用的是nushell,所以下方以nushell运行为例.</span><br><span class="line">JSAPIscan_windows.exe -h #查看帮助</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic1.imgdb.cn/item/68a8505e58cb8da5c842d1b2.png"></p>
+<h3 id="4-2-1-用法详情"><a href="#4-2-1-用法详情" class="headerlink" title="4.2.1 用法详情"></a>4.2.1 用法详情</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 扫描单个url</span><br><span class="line">JSAPIscan_windows.exe -u https://www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic1.imgdb.cn/item/68a8510a58cb8da5c842d1dd.png"></p>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 批量扫描URL</span><br><span class="line">JSAPIscan_windows.exe -f urls.txt </span><br><span class="line"># urls.txt里面包含多个url,一行一个</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic1.imgdb.cn/item/68a8515858cb8da5c842d1fc.png"></p>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 设置线程数和爬取深度</span><br><span class="line">JSAPIscan_windows.exe -u https://www.baidu.com -t 20 -d 5 </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic1.imgdb.cn/item/68a8519c58cb8da5c842d20d.png"></p>
+<hr>
+<h3 id="4-2-2-其他用法"><a href="#4-2-2-其他用法" class="headerlink" title="4.2.2 其他用法"></a>4.2.2 其他用法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 启用自动接口测试（-auto 是未授权访问检测 不加只会爬取）</span><br><span class="line">JSAPIscan.exe -u https://example.com -auto</span><br><span class="line"></span><br><span class="line"># 携带参数进行测试</span><br><span class="line">JSAPIscan.exe -u https://example.com -auto -aparms</span><br><span class="line"></span><br><span class="line"># 启用POC测试</span><br><span class="line">JSAPIscan.exe -u https://example.com -auto -aparms -apoc</span><br><span class="line"></span><br><span class="line"># 批量扫描并自动测试</span><br><span class="line">JSAPIscan.exe -f urls.txt -auto -t 15 -d 4</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-3-参数详情"><a href="#4-3-参数详情" class="headerlink" title="4.3 参数详情"></a>4.3 参数详情</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>默认值</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-u</code></td>
+<td>目标URL</td>
+<td>-</td>
+<td><code>-u https://example.com</code></td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>URL文件路径</td>
+<td>-</td>
+<td><code>-f urls.txt</code></td>
+</tr>
+<tr>
+<td><code>-t</code></td>
+<td>线程数</td>
+<td>10</td>
+<td><code>-t 20</code></td>
+</tr>
+<tr>
+<td><code>-d</code></td>
+<td>爬取深度</td>
+<td>3</td>
+<td><code>-d 5</code></td>
+</tr>
+<tr>
+<td><code>-auto</code></td>
+<td>启用自动接口测试</td>
+<td>false</td>
+<td><code>-auto</code></td>
+</tr>
+<tr>
+<td><code>-aparms</code></td>
+<td>携带参数测试</td>
+<td>false</td>
+<td><code>-aparms</code></td>
+</tr>
+<tr>
+<td><code>-apoc</code></td>
+<td>启用POC测试</td>
+<td>false</td>
+<td><code>-apoc</code></td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>显示帮助信息</td>
+<td>false</td>
+<td><code>-h</code></td>
+</tr>
+<tr>
+<td><code>-sc</code></td>
+<td>不显示相关状态码</td>
+<td>“”</td>
+<td><code>-sc</code></td>
+</tr>
+<tr>
+<td><code>-o</code></td>
+<td>输出文件类型</td>
+<td>“txt”</td>
+<td><code>txt、html</code></td>
+</tr>
+<tr>
+<td><code>-k</code></td>
+<td>只输出关键信息</td>
+<td>false</td>
+<td>&#96;&#96;</td>
+</tr>
+</tbody></table>
+<h1 id="5-支持的框架"><a href="#5-支持的框架" class="headerlink" title="5-支持的框架"></a>5-支持的框架</h1><ul>
+<li><strong>Webpack</strong>: 自动解析chunk.js文件</li>
+<li><strong>Vue.js</strong>: 识别Vue组件中的API调用</li>
+<li><strong>React</strong>: 支持React应用的JS文件分析</li>
+<li><strong>通用JS</strong>: 支持标准JavaScript文件解析</li>
+</ul>
+<h1 id="6-结束语"><a href="#6-结束语" class="headerlink" title="6- 结束语"></a>6- 结束语</h1><ul>
+<li>阿巴阿巴阿巴阿巴阿巴~</li>
+<li>记得将ycc77.com 添加到书签栏哦~</li>
+<li>需要资源,记得将yancy77.cn 添加到书签栏哦~</li>
+</ul>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2025 杨CC 技术录
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;杨CC
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
