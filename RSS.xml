@@ -349,13 +349,6 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</loc>
-    <lastmod>2025-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ycc77.com/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -419,6 +412,13 @@
   </url>
   
   <url>
+    <loc>https://ycc77.com/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</loc>
+    <lastmod>2025-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ycc77.com/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</loc>
     <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -427,6 +427,13 @@
   
   <url>
     <loc>https://ycc77.com/tags/POC-EXP/</loc>
+    <lastmod>2025-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/%E8%93%9D%E9%98%9F%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -448,13 +455,6 @@
   
   <url>
     <loc>https://ycc77.com/tags/%E7%BD%91%E7%AB%99%E7%BB%9F%E8%AE%A1/</loc>
-    <lastmod>2025-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycc77.com/tags/%E8%93%9D%E9%98%9F%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -524,14 +524,14 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/AI%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://ycc77.com/tags/%E6%97%A0%E9%99%90%E5%88%B6AI/</loc>
     <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/%E6%97%A0%E9%99%90%E5%88%B6AI/</loc>
+    <loc>https://ycc77.com/tags/AI%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
