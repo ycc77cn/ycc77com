@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ycc77.com/2025/10/08/28-%E7%BD%91%E7%9B%98%E6%8E%A8%E5%B9%BF/</loc>
+    
+    <lastmod>2025-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ycc77.com/2025/10/10/31-xklnfoScan-%E5%A4%9A%E5%8A%9F%E8%83%BD%E7%BD%91%E7%BB%9C%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/</loc>
     
     <lastmod>2025-10-10</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://ycc77.com/2025/10/09/29-%E7%BD%91%E7%9B%98%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/</loc>
-    
-    <lastmod>2025-10-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycc77.com/2025/10/08/28-%E7%BD%91%E7%9B%98%E6%8E%A8%E5%B9%BF/</loc>
     
     <lastmod>2025-10-09</lastmod>
     
@@ -371,7 +371,7 @@
 
   
   <url>
-    <loc>https://ycc77.com/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</loc>
+    <loc>https://ycc77.com/tags/%E9%97%B2%E9%B1%BC/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -379,13 +379,6 @@
   
   <url>
     <loc>https://ycc77.com/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycc77.com/tags/%E9%97%B2%E9%B1%BC/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -400,6 +393,13 @@
   
   <url>
     <loc>https://ycc77.com/tags/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -504,6 +504,13 @@
   </url>
   
   <url>
+    <loc>https://ycc77.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A3%80%E6%B5%8B/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ycc77.com/tags/vmware/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -511,7 +518,7 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A3%80%E6%B5%8B/</loc>
+    <loc>https://ycc77.com/tags/EXP%E5%90%88%E9%9B%86/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -526,13 +533,6 @@
   
   <url>
     <loc>https://ycc77.com/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/</loc>
-    <lastmod>2025-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycc77.com/tags/EXP%E5%90%88%E9%9B%86/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -660,14 +660,14 @@
 
   
   <url>
-    <loc>https://ycc77.com/categories/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://ycc77.com/categories/%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ycc77.com/categories/%E7%94%B5%E5%95%86%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://ycc77.com/categories/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
