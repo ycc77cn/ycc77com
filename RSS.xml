@@ -477,20 +477,6 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/%E4%BB%A3%E7%90%86%E6%B1%A0/</loc>
-    <lastmod>2025-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycc77.com/tags/%E4%BB%A3%E7%90%86%E6%B1%A0%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2025-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ycc77.com/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -499,6 +485,20 @@
   
   <url>
     <loc>https://ycc77.com/tags/POC-EXP/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/%E4%BB%A3%E7%90%86%E6%B1%A0/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/%E4%BB%A3%E7%90%86%E6%B1%A0%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2025-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
