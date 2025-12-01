@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ycc77.com/link/index.html</loc>
+    <loc>https://ycc77.com/2099/11/25/web%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
     
     <lastmod>2025-12-01</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/2099/11/25/web%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://ycc77.com/link/index.html</loc>
     
     <lastmod>2025-12-01</lastmod>
     
@@ -535,20 +535,6 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/%E4%BB%A3%E7%90%86%E6%B1%A0/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycc77.com/tags/%E4%BB%A3%E7%90%86%E6%B1%A0%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ycc77.com/tags/%E7%A0%B4%E8%A7%A3%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -557,6 +543,20 @@
   
   <url>
     <loc>https://ycc77.com/tags/%E7%A0%B4%E8%A7%A3%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/%E4%BB%A3%E7%90%86%E6%B1%A0/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/%E4%BB%A3%E7%90%86%E6%B1%A0%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -612,14 +612,14 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/vmware/</loc>
+    <loc>https://ycc77.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A3%80%E6%B5%8B/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A3%80%E6%B5%8B/</loc>
+    <loc>https://ycc77.com/tags/vmware/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -766,20 +766,6 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/AI%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycc77.com/tags/AI%E7%84%9A%E5%86%B3/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ycc77.com/tags/%E6%B3%A8%E5%85%A5/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -795,6 +781,20 @@
   
   <url>
     <loc>https://ycc77.com/tags/%E5%86%85%E5%AD%98%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/AI%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/AI%E7%84%9A%E5%86%B3/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
