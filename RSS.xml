@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ycc77.com/2099/12/02/web%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://ycc77.com/2099/12/03/web%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
     
     <lastmod>2025-12-02</lastmod>
     
@@ -789,20 +789,6 @@
   </url>
   
   <url>
-    <loc>https://ycc77.com/tags/%E5%86%85%E5%AD%98%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2025-12-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycc77.com/tags/%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2025-12-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ycc77.com/tags/AI%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -811,6 +797,20 @@
   
   <url>
     <loc>https://ycc77.com/tags/AI%E7%84%9A%E5%86%B3/</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/%E5%86%85%E5%AD%98%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ycc77.com/tags/%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
