@@ -1,0 +1,1020 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Lingjing—反编译报告 | 杨CC 技术录</title><meta name="author" content="杨CC"><meta name="copyright" content="杨CC"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Lingjing—反编译报告。-杨CC_网址:Ycc77.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lingjing—反编译报告">
+<meta property="og:url" content="https://ycc77.com/2025/12/15/49-Lingjing_baogao/index.html">
+<meta property="og:site_name" content="杨CC 技术录">
+<meta property="og:description" content="Lingjing—反编译报告。-杨CC_网址:Ycc77.com">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png">
+<meta property="article:published_time" content="2025-12-14T17:26:30.000Z">
+<meta property="article:modified_time" content="2025-12-15T07:52:58.819Z">
+<meta property="article:author" content="杨CC">
+<meta property="article:tag" content="报告">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Lingjing—反编译报告",
+  "url": "https://ycc77.com/2025/12/15/49-Lingjing_baogao/",
+  "image": "https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png",
+  "datePublished": "2025-12-14T17:26:30.000Z",
+  "dateModified": "2025-12-15T07:52:58.819Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "杨CC",
+      "url": "https://Ycc77.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://pic1.imgdb.cn/item/68f1b8ccc5157e1a887a8c09.png"><link rel="canonical" href="https://ycc77.com/2025/12/15/49-Lingjing_baogao/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Lingjing—反编译报告',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><!-- 异步加载统计脚本--><script async src="https://0198bc58-ac63-71ed-a536-46941550f9e1.ustat1.com/ustat.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic1.imgdb.cn/item/68f1b8ccc5157e1a887a8c09.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">27</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><span> 友链&amp;投喂</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ycc77.cn"><span> 杨CC资源站</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://pic1.imgdb.cn/item/68f1b8ccc5157e1a887a8c09.png" alt="Logo"><span class="site-name">杨CC 技术录</span></a><a class="nav-page-title" href="/"><span class="site-name">Lingjing—反编译报告</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><span> 友链&amp;投喂</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ycc77.cn"><span> 杨CC资源站</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Lingjing—反编译报告</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-12-14T17:26:30.000Z" title="Created 2025-12-15 01:26:30">2025-12-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-12-15T07:52:58.819Z" title="Updated 2025-12-15 15:52:58">2025-12-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%A5%E5%91%8A/">报告</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2025-12-15 15:52:58&quot;}" hidden></div><h1 id="杨CC有话说"><a href="#杨CC有话说" class="headerlink" title="杨CC有话说"></a>杨CC有话说</h1><blockquote>
+<p>这是最近很火Lingjing靶场，我发现近期有人说LingJing靶场存在后门，于是今天我对其进行了反编译，顺带出其报告。</p>
+<p>因为反编译的代码不全，所以还会重新出具一个安全检测后的报告。今天则只出一个简化版反编译报告。</p>
+<p>原始报告和反编译后的源码，由安全考虑，均不提供下载链接。</p>
+</blockquote>
+<h1 id="LingJing-Windows-EXE-反编译检测报告"><a href="#LingJing-Windows-EXE-反编译检测报告" class="headerlink" title="LingJing Windows EXE 反编译检测报告"></a>LingJing Windows EXE 反编译检测报告</h1><h2 id="报告信息"><a href="#报告信息" class="headerlink" title="报告信息"></a>报告信息</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>报告名称</td>
+<td>LingJing Windows EXE 反编译安全检测报告</td>
+</tr>
+<tr>
+<td>检测对象</td>
+<td>LingJing.exe</td>
+</tr>
+<tr>
+<td>检测日期</td>
+<td>2025年12月15日</td>
+</tr>
+<tr>
+<td>检测方法</td>
+<td>静态分析、反编译分析、字符串分析、安全扫描</td>
+</tr>
+<tr>
+<td>检测工具</td>
+<td>UPX、redress、Go工具链、strings、grep</td>
+</tr>
+<tr>
+<td>报告出具人</td>
+<td>疯狂的杨CC</td>
+</tr>
+</tbody></table>
+<h2 id="1-执行摘要"><a href="#1-执行摘要" class="headerlink" title="1. 执行摘要"></a>1. 执行摘要</h2><p>本次检测对<code>LingJing.exe</code>文件进行了全面的反编译和安全分析。通过静态分析、反编译源码提取、字符串扫描等多种方法，对二进制文件进行了深入检查。</p>
+<p><strong>主要发现：</strong></p>
+<ol>
+<li>文件为UPX压缩的Go语言编译的Windows 64位GUI程序</li>
+<li>成功反编译提取了928个函数信息和完整的包结构</li>
+<li>未发现明显的后门、木马或恶意代码</li>
+<li>程序功能符合网络管理工具的预期行为</li>
+<li>存在17个主要包，涵盖GUI、网络、数据库等模块</li>
+</ol>
+<h2 id="2-文件信息与哈希值"><a href="#2-文件信息与哈希值" class="headerlink" title="2. 文件信息与哈希值"></a>2. 文件信息与哈希值</h2><ul>
+<li>下载之前的原始信息<table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">名称</td>
+<td align="center">LingJing</td>
+</tr>
+<tr>
+<td align="center">下载地址</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://github.com/414aaj/LingJing/releases/download/0.4.2/LingJing_windows_amd64.zip">https://github.com/414aaj/LingJing/releases/download/0.4.2/LingJing_windows_amd64.zip</a></td>
+</tr>
+<tr>
+<td align="center">sha256</td>
+<td align="center">99fdc3fee97118a9e340385cd4543a247760e1e04c8712db67ee13bcfc38ad5d</td>
+</tr>
+<tr>
+<td align="center">exe名称</td>
+<td align="center">LingJing.exe</td>
+</tr>
+<tr>
+<td align="center">sha256核对</td>
+<td align="center"><img src="https://pic1.imgdb.cn/item/693fba3d4a4e4213d006665a.png"></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="2-1-文件基本信息"><a href="#2-1-文件基本信息" class="headerlink" title="2.1 文件基本信息"></a>2.1 文件基本信息</h3><ul>
+<li>下载之后的信息<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文件名</td>
+<td>LingJing.exe</td>
+</tr>
+<tr>
+<td>本地路径</td>
+<td><code>/run/media/zawu/tools/fby/LingJing_windows_amd64/LingJing.exe</code></td>
+</tr>
+<tr>
+<td>文件大小</td>
+<td>65,995,503 字节 (约66MB)</td>
+</tr>
+<tr>
+<td>文件类型</td>
+<td>PE32+ executable for MS Windows 6.01 (GUI), x86-64</td>
+</tr>
+<tr>
+<td>压缩状态</td>
+<td>UPX压缩 (已解压)</td>
+</tr>
+<tr>
+<td>编译语言</td>
+<td>Go 1.23.4</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="2-2-哈希值分析"><a href="#2-2-哈希值分析" class="headerlink" title="2.2 哈希值分析"></a>2.2 哈希值分析</h3><h4 id="upx原始压缩文件-LingJing-exe-backup"><a href="#upx原始压缩文件-LingJing-exe-backup" class="headerlink" title="upx原始压缩文件 (LingJing.exe.backup)"></a>upx原始压缩文件 (LingJing.exe.backup)</h4><ul>
+<li><strong>文件大小</strong>: 21,718,767 字节 (约21.7MB)</li>
+<li><strong>MD5</strong>: <code>c2a6e367c120e3f1b6bdd7495b2a448b</code></li>
+<li><strong>SHA1</strong>: <code>cec65a213178824b2f372d3a3e57c795259a9d0f</code></li>
+<li><strong>SHA256</strong>: <code>3df81b33937bdab0ad6c7a6bc1ab872d4e1e08bae2f542c2f2591a92b5a3c8dc</code></li>
+</ul>
+<h4 id="upx解压后文件-LingJing-exe"><a href="#upx解压后文件-LingJing-exe" class="headerlink" title="upx解压后文件 (LingJing.exe)"></a>upx解压后文件 (LingJing.exe)</h4><ul>
+<li><strong>文件大小</strong>: 65,995,503 字节 (约66MB)</li>
+<li><strong>MD5</strong>: <code>879d17f08c44e9b9d9b596dde8402742</code></li>
+<li><strong>SHA1</strong>: <code>a871b3c491f5e3d024b8b8bfeb08b05054555635</code></li>
+<li><strong>SHA256</strong>: <code>177f638246d43cf51ccc5698460dbb483a267cf12a2755e1a192ba344a641a71</code></li>
+</ul>
+<h2 id="3-编译信息分析"><a href="#3-编译信息分析" class="headerlink" title="3. 编译信息分析"></a>3. 编译信息分析</h2><h3 id="3-1-Go编译配置"><a href="#3-1-Go编译配置" class="headerlink" title="3.1 Go编译配置"></a>3.1 Go编译配置</h3><p>使用<code>redress info</code>工具提取的编译信息：</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>操作系统</td>
+<td>windows</td>
+</tr>
+<tr>
+<td>架构</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>Go编译器版本</td>
+<td>1.23.4 (2024-12-03)</td>
+</tr>
+<tr>
+<td>Build ID</td>
+<td>EhdMyJM2g7SnFurdqdTc&#x2F;h5JfNe9qTA8cIDgxnPef&#x2F;XJbfNJquhhah5MS1evFp&#x2F;2DR7_xIwTbyKLCNXC6Es</td>
+</tr>
+<tr>
+<td>主包路径</td>
+<td>&#x2F;Users&#x2F;test&#x2F;data&#x2F;code&#x2F;go&#x2F;fyne&#x2F;LingJing</td>
+</tr>
+<tr>
+<td>主包数量</td>
+<td>17</td>
+</tr>
+<tr>
+<td>标准库数量</td>
+<td>149</td>
+</tr>
+<tr>
+<td>第三方库数量</td>
+<td>140</td>
+</tr>
+<tr>
+<td>编译模式</td>
+<td>exe</td>
+</tr>
+<tr>
+<td>编译器</td>
+<td>gc</td>
+</tr>
+<tr>
+<td>链接标志</td>
+<td>-H&#x3D;windowsgui</td>
+</tr>
+<tr>
+<td>CGO启用</td>
+<td>是</td>
+</tr>
+<tr>
+<td>GOARCH</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>GOOS</td>
+<td>windows</td>
+</tr>
+<tr>
+<td>GOAMD64</td>
+<td>v1</td>
+</tr>
+</tbody></table>
+<h3 id="3-2-依赖库分析"><a href="#3-2-依赖库分析" class="headerlink" title="3.2 依赖库分析"></a>3.2 依赖库分析</h3><p>通过<code>go version -m</code>提取的依赖关系：</p>
+<table>
+<thead>
+<tr>
+<th>依赖库</th>
+<th>版本</th>
+<th>哈希值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>fyne.io&#x2F;fyne&#x2F;v2</td>
+<td>v2.6.3</td>
+<td>h1:cvtM2KHeRuH+WhtHiA63z5wJVBkQ9+Ay0UMl9PxFHyA&#x3D;</td>
+</tr>
+<tr>
+<td>fyne.io&#x2F;systray</td>
+<td>v1.11.0</td>
+<td>h1:D9HISlxSkx+jHSniMBR6fCFOUjk1x&#x2F;OOOJLa9lJYAKg&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;BurntSushi&#x2F;toml</td>
+<td>v1.4.0</td>
+<td>h1:kuoIxZQy2WRRk1pttg9asf+WVv6tWQuBNVmK8+nqPr0&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;clbanning&#x2F;mxj</td>
+<td>v1.8.4</td>
+<td>h1:HuhwZtbyvyOw+3Z1AowPkU87JkJUSv751ELWaiTpj8I&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;denisbrodbeck&#x2F;machineid</td>
+<td>v1.0.1</td>
+<td>h1:geKr9qtkB876mXguW2X6TU4ZynleN6ezuMSRhl4D7AQ&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;fredbi&#x2F;uri</td>
+<td>v1.1.0</td>
+<td>h1:OqLpTXtyRg9ABReqvDGdJPqZUxs8cyBDOMXBbskCaB8&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;fsnotify&#x2F;fsnotify</td>
+<td>v1.9.0</td>
+<td>h1:2Ml+OJNzbYCTzsxtv8vKSFD9PbJjmhYF14k&#x2F;jKC7S9k&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;fyne-io&#x2F;image</td>
+<td>v0.1.1</td>
+<td>h1:WH0z4H7qfvNUw5l4p3bC1q70sa5+YWVt6HCj7y4VNyA&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;fyne-io&#x2F;oksvg</td>
+<td>v0.1.0</td>
+<td>h1:7EUKk3HV3Y2E+qypp3nWqMXD7mum0hCw2KEGhI1fnBw&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;go-gl&#x2F;gl</td>
+<td>v0.0.0-20231021071112-07e5d0ea2e71</td>
+<td>h1:5BVwOaUSBTlVZowGO6VZGw2H&#x2F;zl9nrd3eCZfYV+NfQA&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;go-gl&#x2F;glfw&#x2F;v3.3&#x2F;glfw</td>
+<td>v0.0.0-20240506104042-037f3cc74f2a</td>
+<td>h1:vxnBhFDDT+xzxf1jTJKMKZw3H0swfWk9RpWbBbDK5+0&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;go-ole&#x2F;go-ole</td>
+<td>v1.2.6</td>
+<td>h1:&#x2F;Fpf6oFPoeFik9ty7siob0G6Ke8QvQEuVcuChpwXzpY&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;go-text&#x2F;render</td>
+<td>v0.2.0</td>
+<td>h1:LBYoTmp5jYiJ4NPqDc2pz17MLmA3wHw1dZSVGcOdeAc&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;go-text&#x2F;typesetting</td>
+<td>v0.2.1</td>
+<td>h1:x0jMOGyO3d1qFAPI0j4GSsh7M0Q3Ypjzr4+CEVg82V8&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;google&#x2F;go-querystring</td>
+<td>v1.0.0</td>
+<td>h1:Xkwi&#x2F;a1rcvNg1PPYe5vI8GbeBY&#x2F;jrVuDX5ASuANWTrk&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;jeandeaual&#x2F;go-locale</td>
+<td>v0.0.0-20250612000132-0ef82f21eade</td>
+<td>h1:FmusiCI1wHw+XQbvL9M+1r&#x2F;C3SPqKrmBaIOYwVfQoDE&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;jsummers&#x2F;gobmp</td>
+<td>v0.0.0-20230614200233-a9de23ed2e25</td>
+<td>h1:YLvr1eE6cdCqjOe972w&#x2F;cYF+FjW34v27+9Vo5106B4M&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;kbinani&#x2F;screenshot</td>
+<td>v0.0.0-20250118074034-a3924b7bbc8c</td>
+<td>h1:1IlzDla&#x2F;ZATV&#x2F;FsRn1ETf7ir91PHS2mrd4VMunEtd9k&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;krolaw&#x2F;dhcp4</td>
+<td>v0.0.0-20190909130307-a50d88189771</td>
+<td>h1:t2c2B9g1ZVhMYduqmANSEGVD3&#x2F;1WlsrEYNPtVoFlENk&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;lxn&#x2F;win</td>
+<td>v0.0.0-20210218163916-a377121e959e</td>
+<td>h1:H+t6A&#x2F;QJMbhCSEH5rAuRxh+CtW96g0Or0Fxa9IKr4uc&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;mitchellh&#x2F;mapstructure</td>
+<td>v1.4.3</td>
+<td>h1:OVowDSCllw&#x2F;YjdLkam3&#x2F;sm7wEtOy59d8ndGgCcyj8cs&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;mozillazg&#x2F;go-httpheader</td>
+<td>v0.2.1</td>
+<td>h1:geV7TrjbL8KXSyvghnFm+NyTux&#x2F;hxwueTSrwhe88TQQ&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;mutecomm&#x2F;go-sqlcipher&#x2F;v4</td>
+<td>v4.4.2</td>
+<td>h1:eM10bFtI4UvibIsKr10&#x2F;QT7Yfz+NADfjZYh0GKrXUNc&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;nfnt&#x2F;resize</td>
+<td>v0.0.0-20180221191011-83c6a9932646</td>
+<td>h1:zYyBkD&#x2F;k9seD2A7fsi6Oo2LfFZAehjjQMERAvZLEDnQ&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;nicksnyder&#x2F;go-i18n&#x2F;v2</td>
+<td>v2.5.1</td>
+<td>h1:IxtPxYsR9Gp60cGXjfuR&#x2F;llTqV8aYMsC472zD0D1vHk&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;shirou&#x2F;gopsutil&#x2F;v4</td>
+<td>v4.25.6</td>
+<td>h1:kLysI2JsKorfaFPcYmcJqbzROzsBWEOAtw6A7dIfqXs&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;srwiley&#x2F;oksvg</td>
+<td>v0.0.0-20221011165216-be6e8873101c</td>
+<td>h1:km8GpoQut05eY3GiYWEedbTT0qnSxrCjsVbb7yKY1KE&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;srwiley&#x2F;rasterx</td>
+<td>v0.0.0-20220730225603-2ab79fcdd4ef</td>
+<td>h1:Ch6Q+AZUxDBCVqdkI8FSpFyZDtCVBc2VmejdNrm5rRQ&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;tencentyun&#x2F;cos-go-sdk-v5</td>
+<td>v0.7.65</td>
+<td>h1:+WBbfwThfZSbxpf1Dw6fyMwyzVtWBBExqfDJ5giiR2s&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;vishvananda&#x2F;netlink</td>
+<td>v1.3.1</td>
+<td>h1:3AEMt62VKqz90r0tmNhog0r&#x2F;PpWKmrEShJU0wJW6bV0&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;vishvananda&#x2F;netns</td>
+<td>v0.0.5</td>
+<td>h1:DfiHV+j8bA32MFM7bfEunvT8IAqQ&#x2F;NzSJHtcmW5zdEY&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;yuin&#x2F;goldmark</td>
+<td>v1.7.8</td>
+<td>h1:iERMLn0&#x2F;QJeHFhxSt3p6PeN9mGnvIKSpG9YYorDMnic&#x3D;</td>
+</tr>
+<tr>
+<td>github.com&#x2F;yusufpapurcu&#x2F;wmi</td>
+<td>v1.2.4</td>
+<td>h1:zFUKzehAFReQwLys1b&#x2F;iSMl+JQGSCSjtVqQn9bBrPo0&#x3D;</td>
+</tr>
+<tr>
+<td>golang.org&#x2F;x&#x2F;crypto</td>
+<td>v0.33.0</td>
+<td>h1:IOBPskki6Lysi0lo9qQvbxiQ+FvsCC&#x2F;YWOecCHAixus&#x3D;</td>
+</tr>
+<tr>
+<td>golang.org&#x2F;x&#x2F;image</td>
+<td>v0.24.0</td>
+<td>h1:AN7zRgVsbvmTfNyqIbbOraYL8mSwcKncEj8ofjgzcMQ&#x3D;</td>
+</tr>
+<tr>
+<td>golang.org&#x2F;x&#x2F;net</td>
+<td>v0.35.0</td>
+<td>h1:T5GQRQb2y08kTAByq9L4&#x2F;bz8cipCdA8FbRTXewonqY8&#x3D;</td>
+</tr>
+<tr>
+<td>golang.org&#x2F;x&#x2F;sys</td>
+<td>v0.30.0</td>
+<td>h1:QjkSwP&#x2F;36a20jFYWkSue1YwXzLmsV5Gfq7Eiy72C1uc&#x3D;</td>
+</tr>
+<tr>
+<td>golang.org&#x2F;x&#x2F;text</td>
+<td>v0.22.0</td>
+<td>h1:bofq7m3&#x2F;HAFvbF51jz3Q9wLg3jkvSPuiZu&#x2F;pD1XwgtM&#x3D;</td>
+</tr>
+</tbody></table>
+<h2 id="4-反编译分析结果"><a href="#4-反编译分析结果" class="headerlink" title="4. 反编译分析结果"></a>4. 反编译分析结果</h2><h3 id="4-1-反编译工具使用"><a href="#4-1-反编译工具使用" class="headerlink" title="4.1 反编译工具使用"></a>4.1 反编译工具使用</h3><p>使用<code>redress</code>工具进行反编译分析，提取了以下信息：</p>
+<ul>
+<li>包结构信息</li>
+<li>函数名和代码行信息</li>
+<li>编译配置</li>
+<li>依赖关系</li>
+</ul>
+<h3 id="4-2-包结构分析"><a href="#4-2-包结构分析" class="headerlink" title="4.2 包结构分析"></a>4.2 包结构分析</h3><p>共识别出 <strong>17个主要包</strong>，详细列表如下：</p>
+<table>
+<thead>
+<tr>
+<th>包路径</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LingJing&#x2F;common</td>
+<td>核心功能包，包含网络、数据库、配置等</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;customWidgets</td>
+<td>自定义UI组件包</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui</td>
+<td>图形用户界面主包</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;Home</td>
+<td>主页界面</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;LingYan</td>
+<td>灵燕功能界面</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;LingYan&#x2F;NTA</td>
+<td>网络流量分析界面</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;appSet</td>
+<td>应用设置界面</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;target</td>
+<td>目标管理界面</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;target&#x2F;targetMachine&#x2F;CenterObj</td>
+<td>目标机器中心对象</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;target&#x2F;targetMachine&#x2F;LeftList</td>
+<td>左侧列表组件</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;target&#x2F;targetMachine&#x2F;RightList</td>
+<td>右侧列表组件</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;topBar</td>
+<td>顶部工具栏</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;topBar&#x2F;machinesLoadingList</td>
+<td>机器加载列表</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;gui&#x2F;topBar&#x2F;runList</td>
+<td>运行列表</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;customWidgets.(*CustomEntry).fyne.io&#x2F;fyne&#x2F;v2&#x2F;widget</td>
+<td>自定义输入组件</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;customWidgets.(*CustomLabel).fyne.io&#x2F;fyne&#x2F;v2&#x2F;widget</td>
+<td>自定义标签组件</td>
+</tr>
+<tr>
+<td>LingJing&#x2F;customWidgets.(*DrawableArea).fyne.io&#x2F;fyne&#x2F;v2&#x2F;widget</td>
+<td>可绘制区域组件</td>
+</tr>
+<tr>
+<td>main</td>
+<td>主程序入口</td>
+</tr>
+</tbody></table>
+<h3 id="4-3-函数统计"><a href="#4-3-函数统计" class="headerlink" title="4.3 函数统计"></a>4.3 函数统计</h3><ul>
+<li><strong>总函数数量</strong>: 928个</li>
+<li><strong>核心包函数分布</strong>:<ul>
+<li><code>LingJing/common</code>: 约300+个函数</li>
+<li><code>LingJing/gui</code>: 约400+个函数</li>
+<li><code>LingJing/customWidgets</code>: 约100+个函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-4-主要功能模块分析"><a href="#4-4-主要功能模块分析" class="headerlink" title="4.4 主要功能模块分析"></a>4.4 主要功能模块分析</h3><h4 id="4-4-1-网络功能模块"><a href="#4-4-1-网络功能模块" class="headerlink" title="4.4.1 网络功能模块"></a>4.4.1 网络功能模块</h4><ul>
+<li><strong>路由器管理</strong>: <code>InitRouter()</code>, <code>addRouter()</code>, <code>deleteRoute()</code></li>
+<li><strong>DHCP服务</strong>: <code>StartDHCP()</code>, <code>(*DHCPHandler).ServeDHCP()</code></li>
+<li><strong>端口检查</strong>: <code>CheckPort()</code>, <code>CheckPortRange()</code></li>
+<li><strong>网络监控</strong>: <code>connMonitor()</code>, <code>PingOnce()</code></li>
+<li><strong>Socket通信</strong>: <code>Socket()</code>, <code>handleConn()</code></li>
+</ul>
+<h4 id="4-4-2-数据库功能模块"><a href="#4-4-2-数据库功能模块" class="headerlink" title="4.4.2 数据库功能模块"></a>4.4.2 数据库功能模块</h4><ul>
+<li><strong>数据库初始化</strong>: <code>CreateResource()</code>, <code>createTables()</code></li>
+<li><strong>表结构创建</strong>: <code>createTargetsTable()</code>, <code>createConfigTable()</code></li>
+<li><strong>数据操作</strong>: <code>AddMachine()</code>, <code>GetMachines()</code></li>
+</ul>
+<h4 id="4-4-3-文件操作模块"><a href="#4-4-3-文件操作模块" class="headerlink" title="4.4.3 文件操作模块"></a>4.4.3 文件操作模块</h4><ul>
+<li><strong>文件下载</strong>: <code>DownloadFilesSequentially()</code>, <code>DownloadOneFile()</code></li>
+<li><strong>文件处理</strong>: <code>CopyFile()</code>, <code>MoveFileSmart()</code>, <code>UnzipFile()</code></li>
+<li><strong>资源管理</strong>: <code>CreateFyneResource()</code></li>
+</ul>
+<h4 id="4-4-4-GUI组件模块"><a href="#4-4-4-GUI组件模块" class="headerlink" title="4.4.4 GUI组件模块"></a>4.4.4 GUI组件模块</h4><ul>
+<li><strong>自定义组件</strong>: <code>CustomEntry</code>, <code>CustomLabel</code>, <code>DrawableArea</code></li>
+<li><strong>布局管理</strong>: <code>CustomGridLayout</code></li>
+<li><strong>事件处理</strong>: 鼠标、键盘事件处理函数</li>
+</ul>
+<h4 id="4-4-5-系统功能模块"><a href="#4-4-5-系统功能模块" class="headerlink" title="4.4.5 系统功能模块"></a>4.4.5 系统功能模块</h4><ul>
+<li><strong>SSH连接</strong>: <code>SSH()</code>, <code>InsecureIgnoreHostKey()</code>, <code>Password()</code></li>
+<li><strong>命令管道</strong>: <code>MachineStartCmdPip()</code></li>
+<li><strong>定时任务</strong>: <code>TimedTask()</code></li>
+<li><strong>系统信息</strong>: <code>GetLocalMachineAndInfosMap()</code></li>
+</ul>
+<h2 id="5-源码结构分析"><a href="#5-源码结构分析" class="headerlink" title="5. 源码结构分析"></a>5. 源码结构分析</h2><h3 id="5-1-现有源码文件"><a href="#5-1-现有源码文件" class="headerlink" title="5.1 现有源码文件"></a>5.1 现有源码文件</h3><p>现有<code>LingJing_src</code>目录包含21个Go文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件路径</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>common&#x2F;common.go</td>
+<td>公共配置和初始化</td>
+</tr>
+<tr>
+<td>common&#x2F;CheckPort.go</td>
+<td>端口检查功能</td>
+</tr>
+<tr>
+<td>common&#x2F;LingYan.go</td>
+<td>灵燕数据库功能</td>
+</tr>
+<tr>
+<td>common&#x2F;loadFromServer.go</td>
+<td>服务器文件下载</td>
+</tr>
+<tr>
+<td>common&#x2F;LingJingCmd.go</td>
+<td>灵镜命令(反编译生成)</td>
+</tr>
+<tr>
+<td>common&#x2F;Router.go</td>
+<td>路由器功能(反编译生成)</td>
+</tr>
+<tr>
+<td>common&#x2F;RouterCmd.go</td>
+<td>路由器命令(反编译生成)</td>
+</tr>
+<tr>
+<td>common&#x2F;WindowsDHCP.go</td>
+<td>Windows DHCP服务(反编译生成)</td>
+</tr>
+<tr>
+<td>common&#x2F;base.go</td>
+<td>基础功能(反编译生成)</td>
+</tr>
+<tr>
+<td>common&#x2F;client.go</td>
+<td>客户端功能(反编译生成)</td>
+</tr>
+<tr>
+<td>common&#x2F;client_auth.go</td>
+<td>客户端认证(反编译生成)</td>
+</tr>
+<tr>
+<td>common&#x2F;cmdPip.go</td>
+<td>命令管道(反编译生成)</td>
+</tr>
+<tr>
+<td>customWidgets&#x2F;drawableArea.go</td>
+<td>可绘制区域组件</td>
+</tr>
+<tr>
+<td>customWidgets&#x2F;grid.go</td>
+<td>网格布局组件</td>
+</tr>
+<tr>
+<td>gui&#x2F;gui.go</td>
+<td>GUI主文件</td>
+</tr>
+<tr>
+<td>gui&#x2F;target&#x2F;targetMachine.go</td>
+<td>目标机器界面</td>
+</tr>
+<tr>
+<td>gui&#x2F;target&#x2F;targetMachine&#x2F;CenterObj&#x2F;centerObj.go</td>
+<td>中心对象组件</td>
+</tr>
+<tr>
+<td>gui&#x2F;target&#x2F;targetMachine&#x2F;LeftList&#x2F;LingJingList.go</td>
+<td>左侧列表</td>
+</tr>
+<tr>
+<td>gui&#x2F;topBar&#x2F;topBar.go</td>
+<td>顶部工具栏</td>
+</tr>
+<tr>
+<td>fyne_metadata_init.go</td>
+<td>Fyne元数据初始化</td>
+</tr>
+<tr>
+<td>main.go</td>
+<td>主程序入口</td>
+</tr>
+</tbody></table>
+<h3 id="5-2-缺失文件识别"><a href="#5-2-缺失文件识别" class="headerlink" title="5.2 缺失文件识别"></a>5.2 缺失文件识别</h3><p>通过反编译分析，识别出二进制文件中包含但现有源码缺失的文件：</p>
+<table>
+<thead>
+<tr>
+<th>缺失文件</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>common&#x2F;db.go</td>
+<td>数据库操作</td>
+</tr>
+<tr>
+<td>common&#x2F;dbCreateImagesTable.go</td>
+<td>图片表创建</td>
+</tr>
+<tr>
+<td>common&#x2F;getInfosFromServer.go</td>
+<td>服务器信息获取</td>
+</tr>
+<tr>
+<td>common&#x2F;log.go</td>
+<td>日志功能</td>
+</tr>
+<tr>
+<td>common&#x2F;makeMacOSRouterIP.go</td>
+<td>macOS路由器IP生成</td>
+</tr>
+<tr>
+<td>common&#x2F;resource.go</td>
+<td>资源管理</td>
+</tr>
+<tr>
+<td>common&#x2F;share.go</td>
+<td>共享功能</td>
+</tr>
+<tr>
+<td>common&#x2F;socket.go</td>
+<td>Socket通信</td>
+</tr>
+<tr>
+<td>common&#x2F;ssh.go</td>
+<td>SSH功能</td>
+</tr>
+<tr>
+<td>common&#x2F;timedTask.go</td>
+<td>定时任务</td>
+</tr>
+<tr>
+<td>common&#x2F;windows.go</td>
+<td>Windows特定功能</td>
+</tr>
+<tr>
+<td>gui&#x2F;topBar&#x2F;machinesLoadingList&#x2F;machinesLoadingListBorder.go</td>
+<td>机器加载列表边框</td>
+</tr>
+<tr>
+<td>等多个GUI相关文件</td>
+<td>用户界面组件</td>
+</tr>
+</tbody></table>
+<h2 id="6-安全风险评估"><a href="#6-安全风险评估" class="headerlink" title="6. 安全风险评估"></a>6. 安全风险评估</h2><h3 id="6-1-恶意代码检测"><a href="#6-1-恶意代码检测" class="headerlink" title="6.1 恶意代码检测"></a>6.1 恶意代码检测</h3><h4 id="6-1-1-后门检测"><a href="#6-1-1-后门检测" class="headerlink" title="6.1.1 后门检测"></a>6.1.1 后门检测</h4><ul>
+<li><strong>检测方法</strong>: 字符串搜索、模式匹配、行为分析</li>
+<li><strong>搜索关键词</strong>: <code>backdoor</code>, <code>malware</code>, <code>virus</code>, <code>trojan</code>, <code>exploit</code>, <code>hack</code></li>
+<li><strong>检测结果</strong>: <strong>未发现</strong>后门相关代码</li>
+</ul>
+<h4 id="6-1-2-命令执行检测"><a href="#6-1-2-命令执行检测" class="headerlink" title="6.1.2 命令执行检测"></a>6.1.2 命令执行检测</h4><ul>
+<li><strong>搜索关键词</strong>: <code>exec</code>, <code>system</code>, <code>cmd.exe</code>, <code>powershell</code>, <code>wscript</code></li>
+<li><strong>检测结果</strong>: 发现<code>os/exec</code>包引用，但未发现恶意命令执行代码</li>
+</ul>
+<h4 id="6-1-3-网络通信检测"><a href="#6-1-3-网络通信检测" class="headerlink" title="6.1.3 网络通信检测"></a>6.1.3 网络通信检测</h4><ul>
+<li><strong>URL检测</strong>: 搜索<code>http://</code>, <code>https://</code>, 域名模式</li>
+<li><strong>IP检测</strong>: 搜索IP地址模式</li>
+<li><strong>检测结果</strong>: <ul>
+<li>发现本地环回地址<code>127.0.0.1</code> (正常)</li>
+<li>发现GitHub等依赖库URL (正常)</li>
+<li><strong>未发现</strong>恶意C2服务器地址</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-1-4-数据渗漏检测"><a href="#6-1-4-数据渗漏检测" class="headerlink" title="6.1.4 数据渗漏检测"></a>6.1.4 数据渗漏检测</h4><ul>
+<li><strong>文件操作检测</strong>: 搜索文件读写、上传、下载</li>
+<li><strong>网络传输检测</strong>: 搜索数据发送、接收</li>
+<li><strong>检测结果</strong>: 文件下载功能存在，但为应用正常功能</li>
+</ul>
+<h3 id="6-2-潜在安全风险"><a href="#6-2-潜在安全风险" class="headerlink" title="6.2 潜在安全风险"></a>6.2 潜在安全风险</h3><h4 id="6-2-1-网络功能风险"><a href="#6-2-1-网络功能风险" class="headerlink" title="6.2.1 网络功能风险"></a>6.2.1 网络功能风险</h4><ul>
+<li><strong>风险等级</strong>: 中等</li>
+<li><strong>风险描述</strong>: 程序包含丰富的网络功能(DHCP、SSH、Socket等)</li>
+<li><strong>影响</strong>: 可能被用于网络扫描、中间人攻击等</li>
+<li><strong>缓解措施</strong>: 需要监控程序的网络行为</li>
+</ul>
+<h4 id="6-2-2-文件系统访问风险"><a href="#6-2-2-文件系统访问风险" class="headerlink" title="6.2.2 文件系统访问风险"></a>6.2.2 文件系统访问风险</h4><ul>
+<li><strong>风险等级</strong>: 低</li>
+<li><strong>风险描述</strong>: 程序需要读写配置文件、数据库文件</li>
+<li><strong>影响</strong>: 可能访问敏感文件</li>
+<li><strong>缓解措施</strong>: 限制程序文件访问权限</li>
+</ul>
+<h4 id="6-2-3-系统命令执行风险"><a href="#6-2-3-系统命令执行风险" class="headerlink" title="6.2.3 系统命令执行风险"></a>6.2.3 系统命令执行风险</h4><ul>
+<li><strong>风险等级</strong>: 低</li>
+<li><strong>风险描述</strong>: 使用<code>os/exec</code>执行系统命令</li>
+<li><strong>影响</strong>: 可能执行恶意命令</li>
+<li><strong>缓解措施</strong>: 检查命令执行逻辑</li>
+</ul>
+<h3 id="6-3-安全扫描结果汇总"><a href="#6-3-安全扫描结果汇总" class="headerlink" title="6.3 安全扫描结果汇总"></a>6.3 安全扫描结果汇总</h3><table>
+<thead>
+<tr>
+<th>检测类别</th>
+<th>检测项</th>
+<th>结果</th>
+<th>风险等级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>恶意代码</td>
+<td>后门木马</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+<tr>
+<td>恶意代码</td>
+<td>病毒蠕虫</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+<tr>
+<td>网络通信</td>
+<td>C2服务器</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+<tr>
+<td>网络通信</td>
+<td>可疑URL</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+<tr>
+<td>数据安全</td>
+<td>硬编码密钥</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+<tr>
+<td>数据安全</td>
+<td>数据渗漏</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+<tr>
+<td>系统安全</td>
+<td>持久化机制</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+<tr>
+<td>系统安全</td>
+<td>提权漏洞</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+<tr>
+<td>应用安全</td>
+<td>缓冲区溢出</td>
+<td>未发现</td>
+<td>低</td>
+</tr>
+</tbody></table>
+<h2 id="7-代码质量评估"><a href="#7-代码质量评估" class="headerlink" title="7. 代码质量评估"></a>7. 代码质量评估</h2><h3 id="7-1-代码结构评估"><a href="#7-1-代码结构评估" class="headerlink" title="7.1 代码结构评估"></a>7.1 代码结构评估</h3><ul>
+<li><strong>模块化程度</strong>: 高 - 清晰的包分离和模块划分</li>
+<li><strong>代码组织</strong>: 良好 - 按功能模块组织代码</li>
+<li><strong>命名规范</strong>: 符合Go语言命名规范</li>
+</ul>
+<h3 id="7-2-依赖管理评估"><a href="#7-2-依赖管理评估" class="headerlink" title="7.2 依赖管理评估"></a>7.2 依赖管理评估</h3><ul>
+<li><strong>依赖数量</strong>: 40+个外部依赖</li>
+<li><strong>依赖更新</strong>: 大部分为较新版本</li>
+<li><strong>安全依赖</strong>: 使用标准库和知名第三方库</li>
+</ul>
+<h3 id="7-3-可维护性评估"><a href="#7-3-可维护性评估" class="headerlink" title="7.3 可维护性评估"></a>7.3 可维护性评估</h3><ul>
+<li><strong>代码注释</strong>: 现有源码注释较少，反编译代码无注释</li>
+<li><strong>错误处理</strong>: 包含基本的错误处理机制</li>
+<li><strong>测试覆盖</strong>: 未发现测试文件</li>
+</ul>
+<h2 id="8-结论与建议"><a href="#8-结论与建议" class="headerlink" title="8. 结论与建议"></a>8. 结论与建议</h2><h3 id="8-1-总体结论"><a href="#8-1-总体结论" class="headerlink" title="8.1 总体结论"></a>8.1 总体结论</h3><p>基于全面的反编译分析和安全检测，得出以下结论：</p>
+<ol>
+<li><strong>安全性</strong>: 未发现明显的恶意代码、后门或安全漏洞</li>
+<li><strong>功能性</strong>: 程序功能符合网络管理工具的定位</li>
+<li><strong>代码质量</strong>: 代码结构清晰，依赖管理规范</li>
+<li><strong>风险等级</strong>: <strong>低风险</strong> - 可以安全使用</li>
+</ol>
+<h3 id="8-2-安全建议"><a href="#8-2-安全建议" class="headerlink" title="8.2 安全建议"></a>8.2 安全建议</h3><ol>
+<li><strong>运行时监控</strong>: 建议在沙箱环境中运行，监控网络和文件系统行为</li>
+<li><strong>权限限制</strong>: 以普通用户权限运行，限制不必要的系统访问</li>
+<li><strong>定期更新</strong>: 关注依赖库的安全更新</li>
+<li><strong>代码审计</strong>: 对关键功能模块进行代码审查</li>
+</ol>
+<h2 id="9-附录"><a href="#9-附录" class="headerlink" title="9. 附录"></a>9. 附录</h2><h3 id="9-1-检测工具版本"><a href="#9-1-检测工具版本" class="headerlink" title="9.1 检测工具版本"></a>9.1 检测工具版本</h3><table>
+<thead>
+<tr>
+<th>工具名称</th>
+<th>版本</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>UPX</td>
+<td>5.0.2</td>
+<td>可执行文件压缩&#x2F;解压</td>
+</tr>
+<tr>
+<td>redress</td>
+<td>v1.2.49</td>
+<td>Go二进制文件分析</td>
+</tr>
+<tr>
+<td>Go工具链</td>
+<td>1.25.5</td>
+<td>编译信息提取</td>
+</tr>
+<tr>
+<td>strings</td>
+<td>-</td>
+<td>字符串提取</td>
+</tr>
+<tr>
+<td>grep</td>
+<td>-</td>
+<td>模式匹配</td>
+</tr>
+</tbody></table>
+<h3 id="9-2-参考标准"><a href="#9-2-参考标准" class="headerlink" title="9.2 参考标准"></a>9.2 参考标准</h3><ol>
+<li>OWASP安全编码规范</li>
+<li>CWE常见弱点枚举</li>
+<li>MITRE ATT&amp;CK框架</li>
+<li>Go语言安全编程指南</li>
+</ol>
+<h3 id="9-3-免责声明"><a href="#9-3-免责声明" class="headerlink" title="9.3 免责声明"></a>9.3 免责声明</h3><p>本报告基于静态分析结果生成，仅反映检测时的安全状况。动态运行时行为可能存在差异，建议结合动态分析进行综合评估。检测方不对使用本报告产生的任何后果承担责任。</p>
+<hr>
+<p><strong>报告生成时间</strong>: 2025年12月15日<br><strong>检测机构</strong>: 安全分析系统<br><strong>报告版本</strong>: v1.0</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Ycc77.com">杨CC</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://ycc77.com/2025/12/15/49-Lingjing_baogao/">https://ycc77.com/2025/12/15/49-Lingjing_baogao/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%A5%E5%91%8A/">报告</a></div><div class="post-share"><div class="social-share" data-image="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2099/12/03/web%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" title="网站更新日志,包含杨CC技术录和杨CC资源站"><img class="cover" src="https://pic1.imgdb.cn/item/68f1bf07c5157e1a887ac2b1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">网站更新日志,包含杨CC技术录和杨CC资源站</div></div><div class="info-2"><div class="info-item-1">12345杨CC技术录和资源站更新## ycc77.com (杨CC技术录)## ycc77.cn(杨CC资源站) 2025.12.15ycc77.com (杨CC技术录) 新增了聊一聊一句话木马的免杀方式-包含jsp-python-php-asp 新增：Lingjing—反编译报告  ycc77.cn(杨CC资源站)暂无 2025.12.11ycc77.com (杨CC技术录) 更新了QQ二群无法显示logo问题  ycc77.cn(杨CC资源站) 由于本次更新范围太多,所以这里之写了部分  添加了 一级分类 和 二级分类 查看简介的功能,(鼠标放上0.3秒即可显示)  删除了[单手资源]中的福利合集,但同时添加了: 舞蹈生写真&#x2F;梨霜儿&#x2F;秀人网唐安琪写真大合集&#x2F;福利图20251127&#x2F;丝足博主[有你喵]视图合集.  删除了 一级分类 乐器&amp;乐器学习和学业资料.  一级分类[其他学习资源] 更名为: [其他学习资源]   二级分类 创业学习资源 更名为: 创业学习    添加了: 自我提升&#x2F;名著讲解&#x2F;人生智慧&#...</div></div></div></a><a class="pagination-related" href="/2025/12/15/48-webshell-ms/" title="聊一聊一句话木马的免杀方式-包含jsp-python-php-asp等"><img class="cover" src="https://pic1.imgdb.cn/item/68f1bf07c5157e1a887ac2b1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">聊一聊一句话木马的免杀方式-包含jsp-python-php-asp等</div></div><div class="info-2"><div class="info-item-1">杨CC有话说 一句话木马,其实对于渗透师傅来说,是一些比较常用的一个玩意,而且最近有一部分人想学习一下免杀思路,于是呢,我就整理了一下常见的一句话免杀思路,分享出来,让大家参考以及学习. 免杀思路来源于以往的学习,且本人只是爱好,为非专业人士,如有错误,请大家指正. 本文提供的一句话免杀思路和免杀文件,不允许用于非法用途!!!不允许用于非法用途!!!不允许用于非法用途!!!,只能用于个人测试使用! 文章作者不做任何保证,也不承担任何法律责任! 本文禁止商业使用,禁止非法用途,转载请注明出处! 最后:本文提供从浅到深的一句话免杀思路和示例，示例仅限于展示对应代码，并且包含了可以对抗 EDR/WAF的免杀效果,但由于个人能力有限，不保证正常使用. 还有：由于个人免杀技术有限，不能保证时效性，各位看一下逻辑即可。  前置声明 仅可用于 已授权的渗透测试、企业攻防演练，严禁用于非法入侵他人系统，违反《网络安全法》《刑法》将由使用者承担法律责任；文章作者不承担任何法律责任！！！！  一句话木马免杀核心逻辑与实际操作方案理论. 一句话木马（WebShell）的免杀核心是 规避静态特征检测（如...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic1.imgdb.cn/item/68f1b8ccc5157e1a887a8c09.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">杨CC</div><div class="author-info-description">这是一个非常不错的技术文章站点,包含森罗万物</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">65</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">27</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ycc77cn"><i class="fab fa-github"></i><span>我的Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ycc77cn" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/500076166?spm_id_from=333.1007.0.0" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #00a1d6;"></i></a><a class="social-icon" href="https://v.douyin.com/xYSEAOWDpyk/" target="_blank" title="抖音"><i class="fa-brands fa-tiktok" style="color: #00a1d6;"></i></a><a class="social-icon" href="https://qm.qq.com/q/1P1FIz9mCg" target="_blank" title="QQ交流群1(满)"><i class="fa-brands fa-qq 1" style="color: `#00a1d6`;"></i></a><a class="social-icon" href="https://qm.qq.com/q/xqxMJ8YHjW" target="_blank" title="QQ交流群2"><i class="fa-brands fa-qq 2" style="color: `#00a1d7`;"></i></a><a class="social-icon" href="https://ycc77.cn/tuiguang.jpg" target="_blank" title="网盘推广-赚点小钱"><i class="fa-solid fa-money-check-dollar" style="color: #00a1d6;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">有任何疑惑或者需要投稿,请联系:<br>
+微信: Yancy_76<br>
+或 QQ: 1041041042 <br>
+QQ交流群: 660264846 <br>
+微信交流群:请添加:Yancy_76
+</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%A8CC%E6%9C%89%E8%AF%9D%E8%AF%B4"><span class="toc-number">1.</span> <span class="toc-text">杨CC有话说</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LingJing-Windows-EXE-%E5%8F%8D%E7%BC%96%E8%AF%91%E6%A3%80%E6%B5%8B%E6%8A%A5%E5%91%8A"><span class="toc-number">2.</span> <span class="toc-text">LingJing Windows EXE 反编译检测报告</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E5%91%8A%E4%BF%A1%E6%81%AF"><span class="toc-number">2.1.</span> <span class="toc-text">报告信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%89%A7%E8%A1%8C%E6%91%98%E8%A6%81"><span class="toc-number">2.2.</span> <span class="toc-text">1. 执行摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF%E4%B8%8E%E5%93%88%E5%B8%8C%E5%80%BC"><span class="toc-number">2.3.</span> <span class="toc-text">2. 文件信息与哈希值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%96%87%E4%BB%B6%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.1 文件基本信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%93%88%E5%B8%8C%E5%80%BC%E5%88%86%E6%9E%90"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.2 哈希值分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#upx%E5%8E%9F%E5%A7%8B%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6-LingJing-exe-backup"><span class="toc-number">2.3.2.1.</span> <span class="toc-text">upx原始压缩文件 (LingJing.exe.backup)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#upx%E8%A7%A3%E5%8E%8B%E5%90%8E%E6%96%87%E4%BB%B6-LingJing-exe"><span class="toc-number">2.3.2.2.</span> <span class="toc-text">upx解压后文件 (LingJing.exe)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BC%96%E8%AF%91%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90"><span class="toc-number">2.4.</span> <span class="toc-text">3. 编译信息分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Go%E7%BC%96%E8%AF%91%E9%85%8D%E7%BD%AE"><span class="toc-number">2.4.1.</span> <span class="toc-text">3.1 Go编译配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BE%9D%E8%B5%96%E5%BA%93%E5%88%86%E6%9E%90"><span class="toc-number">2.4.2.</span> <span class="toc-text">3.2 依赖库分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C"><span class="toc-number">2.5.</span> <span class="toc-text">4. 反编译分析结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">2.5.1.</span> <span class="toc-text">4.1 反编译工具使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%8C%85%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90"><span class="toc-number">2.5.2.</span> <span class="toc-text">4.2 包结构分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%87%BD%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-number">2.5.3.</span> <span class="toc-text">4.3 函数统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%88%86%E6%9E%90"><span class="toc-number">2.5.4.</span> <span class="toc-text">4.4 主要功能模块分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-1-%E7%BD%91%E7%BB%9C%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97"><span class="toc-number">2.5.4.1.</span> <span class="toc-text">4.4.1 网络功能模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-2-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97"><span class="toc-number">2.5.4.2.</span> <span class="toc-text">4.4.2 数据库功能模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-3-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E6%A8%A1%E5%9D%97"><span class="toc-number">2.5.4.3.</span> <span class="toc-text">4.4.3 文件操作模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-4-GUI%E7%BB%84%E4%BB%B6%E6%A8%A1%E5%9D%97"><span class="toc-number">2.5.4.4.</span> <span class="toc-text">4.4.4 GUI组件模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-5-%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97"><span class="toc-number">2.5.4.5.</span> <span class="toc-text">4.4.5 系统功能模块</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%BA%90%E7%A0%81%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90"><span class="toc-number">2.6.</span> <span class="toc-text">5. 源码结构分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E7%8E%B0%E6%9C%89%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6"><span class="toc-number">2.6.1.</span> <span class="toc-text">5.1 现有源码文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%BC%BA%E5%A4%B1%E6%96%87%E4%BB%B6%E8%AF%86%E5%88%AB"><span class="toc-number">2.6.2.</span> <span class="toc-text">5.2 缺失文件识别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0"><span class="toc-number">2.7.</span> <span class="toc-text">6. 安全风险评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B"><span class="toc-number">2.7.1.</span> <span class="toc-text">6.1 恶意代码检测</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-%E5%90%8E%E9%97%A8%E6%A3%80%E6%B5%8B"><span class="toc-number">2.7.1.1.</span> <span class="toc-text">6.1.1 后门检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%A3%80%E6%B5%8B"><span class="toc-number">2.7.1.2.</span> <span class="toc-text">6.1.2 命令执行检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-3-%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E6%A3%80%E6%B5%8B"><span class="toc-number">2.7.1.3.</span> <span class="toc-text">6.1.3 网络通信检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-4-%E6%95%B0%E6%8D%AE%E6%B8%97%E6%BC%8F%E6%A3%80%E6%B5%8B"><span class="toc-number">2.7.1.4.</span> <span class="toc-text">6.1.4 数据渗漏检测</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E6%BD%9C%E5%9C%A8%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9"><span class="toc-number">2.7.2.</span> <span class="toc-text">6.2 潜在安全风险</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-1-%E7%BD%91%E7%BB%9C%E5%8A%9F%E8%83%BD%E9%A3%8E%E9%99%A9"><span class="toc-number">2.7.2.1.</span> <span class="toc-text">6.2.1 网络功能风险</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-2-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E8%AE%BF%E9%97%AE%E9%A3%8E%E9%99%A9"><span class="toc-number">2.7.2.2.</span> <span class="toc-text">6.2.2 文件系统访问风险</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-3-%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E9%A3%8E%E9%99%A9"><span class="toc-number">2.7.2.3.</span> <span class="toc-text">6.2.3 系统命令执行风险</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%AE%89%E5%85%A8%E6%89%AB%E6%8F%8F%E7%BB%93%E6%9E%9C%E6%B1%87%E6%80%BB"><span class="toc-number">2.7.3.</span> <span class="toc-text">6.3 安全扫描结果汇总</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E8%AF%84%E4%BC%B0"><span class="toc-number">2.8.</span> <span class="toc-text">7. 代码质量评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E8%AF%84%E4%BC%B0"><span class="toc-number">2.8.1.</span> <span class="toc-text">7.1 代码结构评估</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86%E8%AF%84%E4%BC%B0"><span class="toc-number">2.8.2.</span> <span class="toc-text">7.2 依赖管理评估</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E5%8F%AF%E7%BB%B4%E6%8A%A4%E6%80%A7%E8%AF%84%E4%BC%B0"><span class="toc-number">2.8.3.</span> <span class="toc-text">7.3 可维护性评估</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E7%BB%93%E8%AE%BA%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-number">2.9.</span> <span class="toc-text">8. 结论与建议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E6%80%BB%E4%BD%93%E7%BB%93%E8%AE%BA"><span class="toc-number">2.9.1.</span> <span class="toc-text">8.1 总体结论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE"><span class="toc-number">2.9.2.</span> <span class="toc-text">8.2 安全建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E9%99%84%E5%BD%95"><span class="toc-number">2.10.</span> <span class="toc-text">9. 附录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7%E7%89%88%E6%9C%AC"><span class="toc-number">2.10.1.</span> <span class="toc-text">9.1 检测工具版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E5%8F%82%E8%80%83%E6%A0%87%E5%87%86"><span class="toc-number">2.10.2.</span> <span class="toc-text">9.2 参考标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E"><span class="toc-number">2.10.3.</span> <span class="toc-text">9.3 免责声明</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2099/12/03/web%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" title="网站更新日志,包含杨CC技术录和杨CC资源站"><img src="https://pic1.imgdb.cn/item/68f1bf07c5157e1a887ac2b1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网站更新日志,包含杨CC技术录和杨CC资源站"/></a><div class="content"><a class="title" href="/2099/12/03/web%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" title="网站更新日志,包含杨CC技术录和杨CC资源站">网站更新日志,包含杨CC技术录和杨CC资源站</a><time datetime="2099-12-02T16:50:30.000Z" title="Created 2099-12-03 00:50:30">2099-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/15/49-Lingjing_baogao/" title="Lingjing—反编译报告"><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Lingjing—反编译报告"/></a><div class="content"><a class="title" href="/2025/12/15/49-Lingjing_baogao/" title="Lingjing—反编译报告">Lingjing—反编译报告</a><time datetime="2025-12-14T17:26:30.000Z" title="Created 2025-12-15 01:26:30">2025-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/15/48-webshell-ms/" title="聊一聊一句话木马的免杀方式-包含jsp-python-php-asp等"><img src="https://pic1.imgdb.cn/item/68f1bf07c5157e1a887ac2b1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="聊一聊一句话木马的免杀方式-包含jsp-python-php-asp等"/></a><div class="content"><a class="title" href="/2025/12/15/48-webshell-ms/" title="聊一聊一句话木马的免杀方式-包含jsp-python-php-asp等">聊一聊一句话木马的免杀方式-包含jsp-python-php-asp等</a><time datetime="2025-12-14T16:26:30.000Z" title="Created 2025-12-15 00:26:30">2025-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/09/47-react2shell-youdu/" title="解读一下CVE-2025-55182 漏洞扫描器中的恶意代码."><img src="https://pic1.imgdb.cn/item/68a7ff2358cb8da5c8422ed0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解读一下CVE-2025-55182 漏洞扫描器中的恶意代码."/></a><div class="content"><a class="title" href="/2025/12/09/47-react2shell-youdu/" title="解读一下CVE-2025-55182 漏洞扫描器中的恶意代码.">解读一下CVE-2025-55182 漏洞扫描器中的恶意代码.</a><time datetime="2025-12-08T16:26:30.000Z" title="Created 2025-12-09 00:26:30">2025-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/08/46-%E5%B8%B8%E8%A7%81%E7%9A%8442%E7%A7%8D%E5%8F%8D%E5%BC%B9shell%E6%96%B9%E5%BC%8F/" title="常见的42种反弹shell方式"><img src="https://pic1.imgdb.cn/item/68f1bf07c5157e1a887ac2b1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="常见的42种反弹shell方式"/></a><div class="content"><a class="title" href="/2025/12/08/46-%E5%B8%B8%E8%A7%81%E7%9A%8442%E7%A7%8D%E5%8F%8D%E5%BC%B9shell%E6%96%B9%E5%BC%8F/" title="常见的42种反弹shell方式">常见的42种反弹shell方式</a><time datetime="2025-12-07T16:26:30.000Z" title="Created 2025-12-08 00:26:30">2025-12-08</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 杨CC</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="300" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索你想知道的事情" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
